@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SimpleDEM: SingleBallRoll.h 源文件</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../temp_logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SimpleDEM
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Discrete Element Methods Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d0/d51/_single_ball_roll_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">SingleBallRoll.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;core/SceneBase.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// pkg data compoment</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;pkg/Datas/AabbBnd.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;pkg/Datas/FrictMat.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;pkg/Datas/NormalState.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;pkg/Datas/RectangleShp.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;pkg/Datas/SphereShp.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// pkg functors</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;pkg/Functions/b2_Aabb_Aabb.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;pkg/Functions/ig2_Sphere_Rectangle_ScGeom.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;pkg/Functions/ip2_Frict_Frict_FrictIPhys.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;pkg/Functions/law2_FrictFrict_GcGeom_Std.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">// engines</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;pkg/Functions/CriticalTimestep.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;pkg/Functions/EnergyMonitor.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;pkg/Functions/GravityEngine.h&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;pkg/Functions/LocalDampingEngine.h&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// std</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../d6/d14/class_single_ball_roll.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d6/d14/class_single_ball_roll.html">SingleBallRoll</a> {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">/* Parameters */</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../d6/d14/class_single_ball_roll.html#a50519da560b41a55028f269541cdf6cb">   25</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../d6/d14/class_single_ball_roll.html#a50519da560b41a55028f269541cdf6cb">radius</a> = 0.15;   </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../d6/d14/class_single_ball_roll.html#a43c8930b7c6a1e3fad16d5eddd546108">   26</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../d6/d14/class_single_ball_roll.html#a43c8930b7c6a1e3fad16d5eddd546108">density</a> = 2.3e3; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d6/d14/class_single_ball_roll.html#ad417255c35a2c40ba518637c12b8ba31">   27</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../d6/d14/class_single_ball_roll.html#ad417255c35a2c40ba518637c12b8ba31">stiffness</a> = 1e7; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../d6/d14/class_single_ball_roll.html#a96d134b03f55aaf30d8e5d78153a58d0">   28</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../d6/d14/class_single_ball_roll.html#a96d134b03f55aaf30d8e5d78153a58d0">damping</a> = 0.5;   </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../d6/d14/class_single_ball_roll.html#a3cfafff560dc8fb283613e50226d3385">   29</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../d6/d14/class_single_ball_roll.html#a3cfafff560dc8fb283613e50226d3385">friction</a> = 0.5;  </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d6/d14/class_single_ball_roll.html#ab13caac3180fd834d9fce127b7b8a63d">   31</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../d6/d14/class_single_ball_roll.html#ab13caac3180fd834d9fce127b7b8a63d">wallStiffness</a> = 1e7; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../d6/d14/class_single_ball_roll.html#aae3c59e02cf60e8eb753cac15fb31a22">   32</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../d6/d14/class_single_ball_roll.html#aae3c59e02cf60e8eb753cac15fb31a22">wallDamping</a> = 0.3;   </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d6/d14/class_single_ball_roll.html#a601f73aabd929712e117254b56c2246f">   33</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../d6/d14/class_single_ball_roll.html#a601f73aabd929712e117254b56c2246f">wallFriction</a> = 1.0;  </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../d6/d14/class_single_ball_roll.html#aac6d72945e1a6d86631f2a7a9ab9d587">   35</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d6/d14/class_single_ball_roll.html#aac6d72945e1a6d86631f2a7a9ab9d587">useLocalDamping</a> = <span class="keyword">true</span>; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d6/d14/class_single_ball_roll.html#aebd8ac5cdb9f690fec9611a9adfc5da1">   36</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../d6/d14/class_single_ball_roll.html#aebd8ac5cdb9f690fec9611a9adfc5da1">localDamping</a> = 0.1;   </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../d6/d14/class_single_ball_roll.html#aa966519ceebc0c97a37f2d3616a2fa2c">   38</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../d6/d14/class_single_ball_roll.html#aa966519ceebc0c97a37f2d3616a2fa2c">dtRatio</a> = 0.1; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d6/d14/class_single_ball_roll.html#ac99a57a5de7df6059d2443ddb2340b7b">   40</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d6/d14/class_single_ball_roll.html#ac99a57a5de7df6059d2443ddb2340b7b">useEnergyMonitor</a> = <span class="keyword">true</span>; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../d6/d14/class_single_ball_roll.html#aee21e1dc0a0367d8e7a4656be1fb2585">   41</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d6/d14/class_single_ball_roll.html#aee21e1dc0a0367d8e7a4656be1fb2585">monitorFrequency</a> = 1000;  </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d6/d14/class_single_ball_roll.html#ad6fff794fd3cd738a7f859e084f29d3f">   43</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../d6/d14/class_single_ball_roll.html#ad6fff794fd3cd738a7f859e084f29d3f">slopeY</a> = -0.5; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    std::shared_ptr&lt;SceneBase&gt; make_scene() {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        std::shared_ptr&lt;SceneBase&gt; scene = std::make_shared&lt;SceneBase&gt;(<a class="code" href="../../dd/d9d/class_scene_base.html">SceneBase</a>());</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="comment">/* Materials */</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        std::shared_ptr&lt;Material&gt; particleMat = std::make_shared&lt;FrictMat&gt;(</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <a class="code" href="../../dc/da2/class_frict_mat.html">FrictMat</a>(<a class="code" href="../../d6/d14/class_single_ball_roll.html#ad417255c35a2c40ba518637c12b8ba31">stiffness</a>, <a class="code" href="../../d6/d14/class_single_ball_roll.html#ad417255c35a2c40ba518637c12b8ba31">stiffness</a>, <a class="code" href="../../d6/d14/class_single_ball_roll.html#a3cfafff560dc8fb283613e50226d3385">friction</a>, <a class="code" href="../../d6/d14/class_single_ball_roll.html#a43c8930b7c6a1e3fad16d5eddd546108">density</a>, <a class="code" href="../../d6/d14/class_single_ball_roll.html#a96d134b03f55aaf30d8e5d78153a58d0">damping</a>, <a class="code" href="../../d6/d14/class_single_ball_roll.html#a96d134b03f55aaf30d8e5d78153a58d0">damping</a>));</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        std::shared_ptr&lt;Material&gt; wallMat = std::make_shared&lt;FrictMat&gt;(<a class="code" href="../../dc/da2/class_frict_mat.html">FrictMat</a>(</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <a class="code" href="../../d6/d14/class_single_ball_roll.html#ab13caac3180fd834d9fce127b7b8a63d">wallStiffness</a>, <a class="code" href="../../d6/d14/class_single_ball_roll.html#ab13caac3180fd834d9fce127b7b8a63d">wallStiffness</a>, <a class="code" href="../../d6/d14/class_single_ball_roll.html#a601f73aabd929712e117254b56c2246f">wallFriction</a>, <a class="code" href="../../d6/d14/class_single_ball_roll.html#a43c8930b7c6a1e3fad16d5eddd546108">density</a>, <a class="code" href="../../d6/d14/class_single_ball_roll.html#aae3c59e02cf60e8eb753cac15fb31a22">wallDamping</a>, <a class="code" href="../../d6/d14/class_single_ball_roll.html#aae3c59e02cf60e8eb753cac15fb31a22">wallDamping</a>));</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        scene-&gt;addMaterial(particleMat);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        scene-&gt;addMaterial(wallMat);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="comment">/* Bodies */</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        scene-&gt;addBody(std::make_shared&lt;SphereShp&gt;(<a class="code" href="../../d4/d0c/class_sphere_shp.html">SphereShp</a>(<a class="code" href="../../d6/d14/class_single_ball_roll.html#a50519da560b41a55028f269541cdf6cb">radius</a>)), particleMat,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                       std::make_shared&lt;NormalState&gt;(</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                           <a class="code" href="../../d9/dad/class_normal_state.html">NormalState</a>(vec3(1 - 1.01 * <a class="code" href="../../d6/d14/class_single_ball_roll.html#a50519da560b41a55028f269541cdf6cb">radius</a>, <a class="code" href="../../d6/d14/class_single_ball_roll.html#ad6fff794fd3cd738a7f859e084f29d3f">slopeY</a> + 1 * <a class="code" href="../../d6/d14/class_single_ball_roll.html#a50519da560b41a55028f269541cdf6cb">radius</a>, 0))),</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                       std::make_shared&lt;AabbBnd&gt;(<a class="code" href="../../d0/d6f/class_aabb_bnd.html">AabbBnd</a>()));</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="comment">/* Walls */</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        scene-&gt;addWalls(std::make_shared&lt;RectangleShp&gt;(<a class="code" href="../../dc/d68/class_rectangle_shp.html">RectangleShp</a>(RectAlignment::XZ, 2.0, 2.0)),</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                        wallMat, std::make_shared&lt;NormalState&gt;(<a class="code" href="../../d9/dad/class_normal_state.html">NormalState</a>(vec3(0, -1, 0))),</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                        std::make_shared&lt;AabbBnd&gt;(<a class="code" href="../../d0/d6f/class_aabb_bnd.html">AabbBnd</a>())); <span class="comment">// bottom</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        scene-&gt;addWalls(</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            std::make_shared&lt;RectangleShp&gt;(<a class="code" href="../../dc/d68/class_rectangle_shp.html">RectangleShp</a>(vec3(0, 0, 1), vec3(1, <a class="code" href="../../d6/d14/class_single_ball_roll.html#ad6fff794fd3cd738a7f859e084f29d3f">slopeY</a> + 1, 0), 2,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                                                        std::sqrt(1 + std::pow(-1 - <a class="code" href="../../d6/d14/class_single_ball_roll.html#ad6fff794fd3cd738a7f859e084f29d3f">slopeY</a>, 2)))),</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            wallMat, std::make_shared&lt;NormalState&gt;(<a class="code" href="../../d9/dad/class_normal_state.html">NormalState</a>(vec3(0.5, (-1 + <a class="code" href="../../d6/d14/class_single_ball_roll.html#ad6fff794fd3cd738a7f859e084f29d3f">slopeY</a>) / 2, 0))),</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            std::make_shared&lt;AabbBnd&gt;(<a class="code" href="../../d0/d6f/class_aabb_bnd.html">AabbBnd</a>())); <span class="comment">// slope</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        scene-&gt;addWalls(std::make_shared&lt;RectangleShp&gt;(<a class="code" href="../../dc/d68/class_rectangle_shp.html">RectangleShp</a>(RectAlignment::YZ, 2, 2)),</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                        wallMat, std::make_shared&lt;NormalState&gt;(<a class="code" href="../../d9/dad/class_normal_state.html">NormalState</a>(vec3(-1, 0, 0))),</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                        std::make_shared&lt;AabbBnd&gt;(<a class="code" href="../../d0/d6f/class_aabb_bnd.html">AabbBnd</a>())); <span class="comment">// left</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        scene-&gt;addWalls(std::make_shared&lt;RectangleShp&gt;(<a class="code" href="../../dc/d68/class_rectangle_shp.html">RectangleShp</a>(RectAlignment::YZ, 2, 2)),</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                        wallMat, std::make_shared&lt;NormalState&gt;(<a class="code" href="../../d9/dad/class_normal_state.html">NormalState</a>(vec3(1, 0, 0))),</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                        std::make_shared&lt;AabbBnd&gt;(<a class="code" href="../../d0/d6f/class_aabb_bnd.html">AabbBnd</a>())); <span class="comment">// right</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="comment">/* Functors */</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        scene-&gt;addFunctor&lt;<a class="code" href="../../d4/d0c/class_sphere_shp.html">SphereShp</a>, <a class="code" href="../../dc/d68/class_rectangle_shp.html">RectangleShp</a>&gt;(</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            std::make_shared&lt;ig2_Sphere_Rectangle_ScGeom&gt;(<a class="code" href="../../de/d12/classig2___sphere___rectangle___sc_geom.html">ig2_Sphere_Rectangle_ScGeom</a>()));</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        scene-&gt;addIPhysFunctor&lt;<a class="code" href="../../dc/da2/class_frict_mat.html">FrictMat</a>, <a class="code" href="../../dc/da2/class_frict_mat.html">FrictMat</a>&gt;(</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            std::make_shared&lt;ip2_Frict_Frict_FrictIPhys&gt;(<a class="code" href="../../dc/d78/classip2___frict___frict___frict_i_phys.html">ip2_Frict_Frict_FrictIPhys</a>()));</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        scene-&gt;addLawFunctor&lt;<a class="code" href="../../d4/dce/class_frict_phys.html">FrictPhys</a>, <a class="code" href="../../d5/dab/class_general_circle_geom.html">GeneralCircleGeom</a>&gt;(</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            std::make_shared&lt;law2_FrictFrict_GcGeom_Std&gt;(<a class="code" href="../../d6/d98/classlaw2___frict_frict___gc_geom___std.html">law2_FrictFrict_GcGeom_Std</a>()));</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        scene-&gt;addBIntersectFunctor&lt;<a class="code" href="../../d0/d6f/class_aabb_bnd.html">AabbBnd</a>, <a class="code" href="../../d0/d6f/class_aabb_bnd.html">AabbBnd</a>&gt;(</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            std::make_shared&lt;bi2_Aabb_Aabb&gt;(<a class="code" href="../../d5/d99/classbi2___aabb___aabb.html">bi2_Aabb_Aabb</a>()));</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="comment">/* Engines */</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        std::shared_ptr&lt;Engine&gt; gravityEngine =</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            std::make_shared&lt;GravityEngine&gt;(<a class="code" href="../../d1/dcb/class_gravity_engine.html">GravityEngine</a>(scene));</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        std::shared_ptr&lt;Engine&gt; dtCalculator =</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            std::make_shared&lt;CriticalTimestep&gt;(<a class="code" href="../../d8/d82/class_critical_timestep.html">CriticalTimestep</a>(scene, 0.1 * <a class="code" href="../../d6/d14/class_single_ball_roll.html#aa966519ceebc0c97a37f2d3616a2fa2c">dtRatio</a>));</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        scene-&gt;_dtCalculator = dtCalculator;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        scene-&gt;_gravityEngine = gravityEngine;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d6/d14/class_single_ball_roll.html#aac6d72945e1a6d86631f2a7a9ab9d587">useLocalDamping</a>) {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            std::shared_ptr&lt;Engine&gt; localDamp =</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                std::make_shared&lt;LocalDampingEngine&gt;(<a class="code" href="../../d0/d7e/class_local_damping_engine.html">LocalDampingEngine</a>(scene, <a class="code" href="../../d6/d14/class_single_ball_roll.html#aebd8ac5cdb9f690fec9611a9adfc5da1">localDamping</a>));</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            scene-&gt;_localDamping = localDamp;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d6/d14/class_single_ball_roll.html#ac99a57a5de7df6059d2443ddb2340b7b">useEnergyMonitor</a>) {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            std::shared_ptr&lt;Engine&gt; energyMonitor =</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                std::make_shared&lt;EnergyMonitor&gt;(<a class="code" href="../../d5/d60/class_energy_monitor.html">EnergyMonitor</a>(scene, <a class="code" href="../../d6/d14/class_single_ball_roll.html#aee21e1dc0a0367d8e7a4656be1fb2585">monitorFrequency</a>));</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            scene-&gt;_energyMonitor = energyMonitor;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">return</span> scene;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;};</div>
+<div class="ttc" id="aclass_aabb_bnd_html"><div class="ttname"><a href="../../d0/d6f/class_aabb_bnd.html">AabbBnd</a></div><div class="ttdoc">AabbBnd类, 表示AABB Bound, 用于进行pass 1的碰撞检测</div><div class="ttdef"><b>Definition:</b> AabbBnd.h:5</div></div>
+<div class="ttc" id="aclass_critical_timestep_html"><div class="ttname"><a href="../../d8/d82/class_critical_timestep.html">CriticalTimestep</a></div><div class="ttdoc">CriticalTimestep Class for determination of the Critical Time Step of the simulation....</div><div class="ttdef"><b>Definition:</b> CriticalTimestep.h:8</div></div>
+<div class="ttc" id="aclass_energy_monitor_html"><div class="ttname"><a href="../../d5/d60/class_energy_monitor.html">EnergyMonitor</a></div><div class="ttdef"><b>Definition:</b> EnergyMonitor.h:7</div></div>
+<div class="ttc" id="aclass_frict_mat_html"><div class="ttname"><a href="../../dc/da2/class_frict_mat.html">FrictMat</a></div><div class="ttdoc">FrictMat类, 有密度/刚度/摩擦系数等属性</div><div class="ttdef"><b>Definition:</b> FrictMat.h:5</div></div>
+<div class="ttc" id="aclass_frict_phys_html"><div class="ttname"><a href="../../d4/dce/class_frict_phys.html">FrictPhys</a></div><div class="ttdef"><b>Definition:</b> FrictPhys.h:4</div></div>
+<div class="ttc" id="aclass_general_circle_geom_html"><div class="ttname"><a href="../../d5/dab/class_general_circle_geom.html">GeneralCircleGeom</a></div><div class="ttdoc">A general interaction geometry class for circle-circle type of interactions</div><div class="ttdef"><b>Definition:</b> GeneralCircleGeom.h:7</div></div>
+<div class="ttc" id="aclass_gravity_engine_html"><div class="ttname"><a href="../../d1/dcb/class_gravity_engine.html">GravityEngine</a></div><div class="ttdef"><b>Definition:</b> GravityEngine.h:6</div></div>
+<div class="ttc" id="aclass_local_damping_engine_html"><div class="ttname"><a href="../../d0/d7e/class_local_damping_engine.html">LocalDampingEngine</a></div><div class="ttdef"><b>Definition:</b> LocalDampingEngine.h:5</div></div>
+<div class="ttc" id="aclass_normal_state_html"><div class="ttname"><a href="../../d9/dad/class_normal_state.html">NormalState</a></div><div class="ttdef"><b>Definition:</b> NormalState.h:7</div></div>
+<div class="ttc" id="aclass_rectangle_shp_html"><div class="ttname"><a href="../../dc/d68/class_rectangle_shp.html">RectangleShp</a></div><div class="ttdef"><b>Definition:</b> RectangleShp.h:11</div></div>
+<div class="ttc" id="aclass_scene_base_html"><div class="ttname"><a href="../../dd/d9d/class_scene_base.html">SceneBase</a></div><div class="ttdoc">Scene类, 是模拟的最大容器, 包含所有的颗粒, 函数等</div><div class="ttdef"><b>Definition:</b> SceneBase.h:23</div></div>
+<div class="ttc" id="aclass_single_ball_roll_html"><div class="ttname"><a href="../../d6/d14/class_single_ball_roll.html">SingleBallRoll</a></div><div class="ttdef"><b>Definition:</b> SingleBallRoll.h:22</div></div>
+<div class="ttc" id="aclass_single_ball_roll_html_a3cfafff560dc8fb283613e50226d3385"><div class="ttname"><a href="../../d6/d14/class_single_ball_roll.html#a3cfafff560dc8fb283613e50226d3385">SingleBallRoll::friction</a></div><div class="ttdeci">double friction</div><div class="ttdoc">friction coeff of the ball</div><div class="ttdef"><b>Definition:</b> SingleBallRoll.h:29</div></div>
+<div class="ttc" id="aclass_single_ball_roll_html_a43c8930b7c6a1e3fad16d5eddd546108"><div class="ttname"><a href="../../d6/d14/class_single_ball_roll.html#a43c8930b7c6a1e3fad16d5eddd546108">SingleBallRoll::density</a></div><div class="ttdeci">double density</div><div class="ttdoc">density of the ball</div><div class="ttdef"><b>Definition:</b> SingleBallRoll.h:26</div></div>
+<div class="ttc" id="aclass_single_ball_roll_html_a50519da560b41a55028f269541cdf6cb"><div class="ttname"><a href="../../d6/d14/class_single_ball_roll.html#a50519da560b41a55028f269541cdf6cb">SingleBallRoll::radius</a></div><div class="ttdeci">double radius</div><div class="ttdoc">radius of the ball</div><div class="ttdef"><b>Definition:</b> SingleBallRoll.h:25</div></div>
+<div class="ttc" id="aclass_single_ball_roll_html_a601f73aabd929712e117254b56c2246f"><div class="ttname"><a href="../../d6/d14/class_single_ball_roll.html#a601f73aabd929712e117254b56c2246f">SingleBallRoll::wallFriction</a></div><div class="ttdeci">double wallFriction</div><div class="ttdoc">friction coeff of the wall</div><div class="ttdef"><b>Definition:</b> SingleBallRoll.h:33</div></div>
+<div class="ttc" id="aclass_single_ball_roll_html_a96d134b03f55aaf30d8e5d78153a58d0"><div class="ttname"><a href="../../d6/d14/class_single_ball_roll.html#a96d134b03f55aaf30d8e5d78153a58d0">SingleBallRoll::damping</a></div><div class="ttdeci">double damping</div><div class="ttdoc">damping coeff of the ball</div><div class="ttdef"><b>Definition:</b> SingleBallRoll.h:28</div></div>
+<div class="ttc" id="aclass_single_ball_roll_html_aa966519ceebc0c97a37f2d3616a2fa2c"><div class="ttname"><a href="../../d6/d14/class_single_ball_roll.html#aa966519ceebc0c97a37f2d3616a2fa2c">SingleBallRoll::dtRatio</a></div><div class="ttdeci">double dtRatio</div><div class="ttdoc">time step ratio to critical time step</div><div class="ttdef"><b>Definition:</b> SingleBallRoll.h:38</div></div>
+<div class="ttc" id="aclass_single_ball_roll_html_aac6d72945e1a6d86631f2a7a9ab9d587"><div class="ttname"><a href="../../d6/d14/class_single_ball_roll.html#aac6d72945e1a6d86631f2a7a9ab9d587">SingleBallRoll::useLocalDamping</a></div><div class="ttdeci">bool useLocalDamping</div><div class="ttdoc">whether to use local damping</div><div class="ttdef"><b>Definition:</b> SingleBallRoll.h:35</div></div>
+<div class="ttc" id="aclass_single_ball_roll_html_aae3c59e02cf60e8eb753cac15fb31a22"><div class="ttname"><a href="../../d6/d14/class_single_ball_roll.html#aae3c59e02cf60e8eb753cac15fb31a22">SingleBallRoll::wallDamping</a></div><div class="ttdeci">double wallDamping</div><div class="ttdoc">damping coeff of the wall</div><div class="ttdef"><b>Definition:</b> SingleBallRoll.h:32</div></div>
+<div class="ttc" id="aclass_single_ball_roll_html_ab13caac3180fd834d9fce127b7b8a63d"><div class="ttname"><a href="../../d6/d14/class_single_ball_roll.html#ab13caac3180fd834d9fce127b7b8a63d">SingleBallRoll::wallStiffness</a></div><div class="ttdeci">double wallStiffness</div><div class="ttdoc">stiffness of the wall</div><div class="ttdef"><b>Definition:</b> SingleBallRoll.h:31</div></div>
+<div class="ttc" id="aclass_single_ball_roll_html_ac99a57a5de7df6059d2443ddb2340b7b"><div class="ttname"><a href="../../d6/d14/class_single_ball_roll.html#ac99a57a5de7df6059d2443ddb2340b7b">SingleBallRoll::useEnergyMonitor</a></div><div class="ttdeci">bool useEnergyMonitor</div><div class="ttdoc">whether to use energyMonitor</div><div class="ttdef"><b>Definition:</b> SingleBallRoll.h:40</div></div>
+<div class="ttc" id="aclass_single_ball_roll_html_ad417255c35a2c40ba518637c12b8ba31"><div class="ttname"><a href="../../d6/d14/class_single_ball_roll.html#ad417255c35a2c40ba518637c12b8ba31">SingleBallRoll::stiffness</a></div><div class="ttdeci">double stiffness</div><div class="ttdoc">stiffness of the ball</div><div class="ttdef"><b>Definition:</b> SingleBallRoll.h:27</div></div>
+<div class="ttc" id="aclass_single_ball_roll_html_ad6fff794fd3cd738a7f859e084f29d3f"><div class="ttname"><a href="../../d6/d14/class_single_ball_roll.html#ad6fff794fd3cd738a7f859e084f29d3f">SingleBallRoll::slopeY</a></div><div class="ttdeci">double slopeY</div><div class="ttdef"><b>Definition:</b> SingleBallRoll.h:43</div></div>
+<div class="ttc" id="aclass_single_ball_roll_html_aebd8ac5cdb9f690fec9611a9adfc5da1"><div class="ttname"><a href="../../d6/d14/class_single_ball_roll.html#aebd8ac5cdb9f690fec9611a9adfc5da1">SingleBallRoll::localDamping</a></div><div class="ttdeci">double localDamping</div><div class="ttdoc">local damping coeff</div><div class="ttdef"><b>Definition:</b> SingleBallRoll.h:36</div></div>
+<div class="ttc" id="aclass_single_ball_roll_html_aee21e1dc0a0367d8e7a4656be1fb2585"><div class="ttname"><a href="../../d6/d14/class_single_ball_roll.html#aee21e1dc0a0367d8e7a4656be1fb2585">SingleBallRoll::monitorFrequency</a></div><div class="ttdeci">int monitorFrequency</div><div class="ttdoc">energy monitoring per ~ number of steps</div><div class="ttdef"><b>Definition:</b> SingleBallRoll.h:41</div></div>
+<div class="ttc" id="aclass_sphere_shp_html"><div class="ttname"><a href="../../d4/d0c/class_sphere_shp.html">SphereShp</a></div><div class="ttdoc">SphereShp类, 表示一个三维球形Shape</div><div class="ttdef"><b>Definition:</b> SphereShp.h:9</div></div>
+<div class="ttc" id="aclassbi2___aabb___aabb_html"><div class="ttname"><a href="../../d5/d99/classbi2___aabb___aabb.html">bi2_Aabb_Aabb</a></div><div class="ttdef"><b>Definition:</b> b2_Aabb_Aabb.h:5</div></div>
+<div class="ttc" id="aclassig2___sphere___rectangle___sc_geom_html"><div class="ttname"><a href="../../de/d12/classig2___sphere___rectangle___sc_geom.html">ig2_Sphere_Rectangle_ScGeom</a></div><div class="ttdoc">Interaction geometry class for sphere-rectangle contact</div><div class="ttdef"><b>Definition:</b> ig2_Sphere_Rectangle_ScGeom.h:8</div></div>
+<div class="ttc" id="aclassip2___frict___frict___frict_i_phys_html"><div class="ttname"><a href="../../dc/d78/classip2___frict___frict___frict_i_phys.html">ip2_Frict_Frict_FrictIPhys</a></div><div class="ttdef"><b>Definition:</b> ip2_Frict_Frict_FrictIPhys.h:7</div></div>
+<div class="ttc" id="aclasslaw2___frict_frict___gc_geom___std_html"><div class="ttname"><a href="../../d6/d98/classlaw2___frict_frict___gc_geom___std.html">law2_FrictFrict_GcGeom_Std</a></div><div class="ttdoc">Standard contact law</div><div class="ttdef"><b>Definition:</b> law2_FrictFrict_GcGeom_Std.h:8</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_d2bdd8205b81aa505d96e4fc22c7ef04.html">SimpleDEM</a></li><li class="navelem"><a class="el" href="../../dir_0a0c75e27d72a3a6558198456060c458.html">include</a></li><li class="navelem"><a class="el" href="../../dir_a03799d2b3cfcbc04a115e190847317d.html">experiments</a></li><li class="navelem"><b>SingleBallRoll.h</b></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

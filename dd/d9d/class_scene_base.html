@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SimpleDEM: SceneBase类 参考</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../temp_logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SimpleDEM
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Discrete Element Methods Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('dd/d9d/class_scene_base.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="../../de/dbf/class_scene_base-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">SceneBase类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Scene类, 是模拟的最大容器, 包含所有的颗粒, 函数等  
+ <a href="../../dd/d9d/class_scene_base.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d6/d8f/_scene_base_8h_source.html">SceneBase.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:afa8a499e746ab986715658d30dc7e140"><td class="memItemLeft" align="right" valign="top"><a id="afa8a499e746ab986715658d30dc7e140"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d9d/class_scene_base.html#afa8a499e746ab986715658d30dc7e140">SceneBase</a> (const double &amp;dt=1e-5)</td></tr>
+<tr class="memdesc:afa8a499e746ab986715658d30dc7e140"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数 <br /></td></tr>
+<tr class="separator:afa8a499e746ab986715658d30dc7e140"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a094ca3948ffdf5a210d36e11a883953c"><td class="memItemLeft" align="right" valign="top"><a id="a094ca3948ffdf5a210d36e11a883953c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d9d/class_scene_base.html#a094ca3948ffdf5a210d36e11a883953c">addMaterial</a> (std::shared_ptr&lt; <a class="el" href="../../dc/dee/class_material.html">Material</a> &gt; &amp;mat)</td></tr>
+<tr class="memdesc:a094ca3948ffdf5a210d36e11a883953c"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加材料 <br /></td></tr>
+<tr class="separator:a094ca3948ffdf5a210d36e11a883953c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4f630e51b17796785de19ac65284d04"><td class="memItemLeft" align="right" valign="top"><a id="ad4f630e51b17796785de19ac65284d04"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d9d/class_scene_base.html#ad4f630e51b17796785de19ac65284d04">addBody</a> (const std::shared_ptr&lt; <a class="el" href="../../d7/da7/class_shape.html">Shape</a> &gt; &amp;shp, const std::shared_ptr&lt; <a class="el" href="../../dc/dee/class_material.html">Material</a> &gt; &amp;mat, const std::shared_ptr&lt; <a class="el" href="../../d0/d8b/class_state.html">State</a> &gt; &amp;stat, const std::shared_ptr&lt; <a class="el" href="../../dd/d1a/class_bound.html">Bound</a> &gt; &amp;bnd)</td></tr>
+<tr class="memdesc:ad4f630e51b17796785de19ac65284d04"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加颗粒 <br /></td></tr>
+<tr class="separator:ad4f630e51b17796785de19ac65284d04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27b111af6f2ddf18e4043106f5701128"><td class="memItemLeft" align="right" valign="top"><a id="a27b111af6f2ddf18e4043106f5701128"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addWalls</b> (const std::shared_ptr&lt; <a class="el" href="../../d7/da7/class_shape.html">Shape</a> &gt; &amp;shp, const std::shared_ptr&lt; <a class="el" href="../../dc/dee/class_material.html">Material</a> &gt; &amp;mat, const std::shared_ptr&lt; <a class="el" href="../../d0/d8b/class_state.html">State</a> &gt; &amp;stat, const std::shared_ptr&lt; <a class="el" href="../../dd/d1a/class_bound.html">Bound</a> &gt; &amp;bnd, const bool &amp;dynamic=true)</td></tr>
+<tr class="separator:a27b111af6f2ddf18e4043106f5701128"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d84eb7eb70342304b9e7fd0503579aa"><td class="memTemplParams" colspan="2"><a id="a6d84eb7eb70342304b9e7fd0503579aa"></a>
+template&lt;class SomeLhs , class SomeRhs &gt; </td></tr>
+<tr class="memitem:a6d84eb7eb70342304b9e7fd0503579aa"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d9d/class_scene_base.html#a6d84eb7eb70342304b9e7fd0503579aa">addFunctor</a> (const std::shared_ptr&lt; <a class="el" href="../../d5/ded/class_i_geom_functor.html">IGeomFunctor</a> &gt; &amp;pFun)</td></tr>
+<tr class="memdesc:a6d84eb7eb70342304b9e7fd0503579aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加callable functor <br /></td></tr>
+<tr class="separator:a6d84eb7eb70342304b9e7fd0503579aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a191585b96fc32bb81257ca3701b95133"><td class="memTemplParams" colspan="2"><a id="a191585b96fc32bb81257ca3701b95133"></a>
+template&lt;class SomeLhs , class SomeRhs &gt; </td></tr>
+<tr class="memitem:a191585b96fc32bb81257ca3701b95133"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>addIPhysFunctor</b> (const std::shared_ptr&lt; <a class="el" href="../../db/dcd/class_i_phys_functor.html">IPhysFunctor</a> &gt; &amp;pFun)</td></tr>
+<tr class="separator:a191585b96fc32bb81257ca3701b95133"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17c0fe1667248602c0f9f51d22d57190"><td class="memTemplParams" colspan="2"><a id="a17c0fe1667248602c0f9f51d22d57190"></a>
+template&lt;class SomeLhs , class SomeRhs &gt; </td></tr>
+<tr class="memitem:a17c0fe1667248602c0f9f51d22d57190"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>addLawFunctor</b> (const std::shared_ptr&lt; <a class="el" href="../../d2/d8f/class_law_functor.html">LawFunctor</a> &gt; &amp;pFun)</td></tr>
+<tr class="separator:a17c0fe1667248602c0f9f51d22d57190"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a561c049b79c0524bcf2bb3358cc28c95"><td class="memTemplParams" colspan="2"><a id="a561c049b79c0524bcf2bb3358cc28c95"></a>
+template&lt;class SomeLhs , class SomeRhs &gt; </td></tr>
+<tr class="memitem:a561c049b79c0524bcf2bb3358cc28c95"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>addBIntersectFunctor</b> (const std::shared_ptr&lt; <a class="el" href="../../df/d4d/class_b_intersect_functor.html">BIntersectFunctor</a> &gt; &amp;pFun)</td></tr>
+<tr class="separator:a561c049b79c0524bcf2bb3358cc28c95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a810ec5bfa722df5c3296229081fd7aff"><td class="memItemLeft" align="right" valign="top"><a id="a810ec5bfa722df5c3296229081fd7aff"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d9d/class_scene_base.html#a810ec5bfa722df5c3296229081fd7aff">draw</a> () const</td></tr>
+<tr class="memdesc:a810ec5bfa722df5c3296229081fd7aff"><td class="mdescLeft">&#160;</td><td class="mdescRight">绘制场景, 需要调用每个Body的draw函数进行绘制 <br /></td></tr>
+<tr class="separator:a810ec5bfa722df5c3296229081fd7aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95215d55f7b9d0ba4a278b4370c69110"><td class="memItemLeft" align="right" valign="top"><a id="a95215d55f7b9d0ba4a278b4370c69110"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d9d/class_scene_base.html#a95215d55f7b9d0ba4a278b4370c69110">preSimulation</a> ()</td></tr>
+<tr class="memdesc:a95215d55f7b9d0ba4a278b4370c69110"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulation预备计算 <br /></td></tr>
+<tr class="separator:a95215d55f7b9d0ba4a278b4370c69110"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a097960641c5c9ac4899039c390411122"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d9d/class_scene_base.html#a097960641c5c9ac4899039c390411122">simulationLoop</a> ()</td></tr>
+<tr class="memdesc:a097960641c5c9ac4899039c390411122"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulation Loop  <a href="../../dd/d9d/class_scene_base.html#a097960641c5c9ac4899039c390411122">更多...</a><br /></td></tr>
+<tr class="separator:a097960641c5c9ac4899039c390411122"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24989e5bd579a45abbf63626aff4ce7d"><td class="memItemLeft" align="right" valign="top"><a id="a24989e5bd579a45abbf63626aff4ce7d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>init_taskflow</b> (tf::Taskflow &amp;taskflow)</td></tr>
+<tr class="separator:a24989e5bd579a45abbf63626aff4ce7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a061c5f4c0f5599b17e8d9ec119de9c0e"><td class="memItemLeft" align="right" valign="top"><a id="a061c5f4c0f5599b17e8d9ec119de9c0e"></a>
+<a class="el" href="../../db/d60/class_body_container.html">BodyContainer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>bodyContainer</b> ()</td></tr>
+<tr class="separator:a061c5f4c0f5599b17e8d9ec119de9c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d94a6dc9780f0649cf8aff3add6f848"><td class="memItemLeft" align="right" valign="top"><a id="a0d94a6dc9780f0649cf8aff3add6f848"></a>
+<a class="el" href="../../db/d60/class_body_container.html">BodyContainer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>wallContainer</b> ()</td></tr>
+<tr class="separator:a0d94a6dc9780f0649cf8aff3add6f848"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9947a56f301284e3ff1e1f72f16441ed"><td class="memItemLeft" align="right" valign="top"><a id="a9947a56f301284e3ff1e1f72f16441ed"></a>
+InteractionContainer &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>interactionContainer</b> ()</td></tr>
+<tr class="separator:a9947a56f301284e3ff1e1f72f16441ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cc41fa2593125bebc81bea27fcf7534"><td class="memItemLeft" align="right" valign="top"><a id="a8cc41fa2593125bebc81bea27fcf7534"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setStop</b> (const bool &amp;stop)</td></tr>
+<tr class="separator:a8cc41fa2593125bebc81bea27fcf7534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a804b00e363858007a2f5598a39a0b27f"><td class="memItemLeft" align="right" valign="top"><a id="a804b00e363858007a2f5598a39a0b27f"></a>
+const bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>stop</b> () const</td></tr>
+<tr class="separator:a804b00e363858007a2f5598a39a0b27f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ab7c99a957e911932b2490635bc8bab"><td class="memItemLeft" align="right" valign="top"><a id="a5ab7c99a957e911932b2490635bc8bab"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d9d/class_scene_base.html#a5ab7c99a957e911932b2490635bc8bab">delta</a> () const</td></tr>
+<tr class="memdesc:a5ab7c99a957e911932b2490635bc8bab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return simulation time step <br /></td></tr>
+<tr class="separator:a5ab7c99a957e911932b2490635bc8bab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d6554795d9fb8e6dff2081d2cf1b56d"><td class="memItemLeft" align="right" valign="top"><a id="a0d6554795d9fb8e6dff2081d2cf1b56d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d9d/class_scene_base.html#a0d6554795d9fb8e6dff2081d2cf1b56d">updateDelta</a> (const double &amp;newDt)</td></tr>
+<tr class="memdesc:a0d6554795d9fb8e6dff2081d2cf1b56d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update/Set simulation time step <br /></td></tr>
+<tr class="separator:a0d6554795d9fb8e6dff2081d2cf1b56d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa21ed3a2f422d9657ac5b0ce6e5c1a65"><td class="memItemLeft" align="right" valign="top"><a id="aa21ed3a2f422d9657ac5b0ce6e5c1a65"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d9d/class_scene_base.html#aa21ed3a2f422d9657ac5b0ce6e5c1a65">numBodies</a> () const</td></tr>
+<tr class="memdesc:aa21ed3a2f422d9657ac5b0ce6e5c1a65"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回当前场景中的颗粒数 <br /></td></tr>
+<tr class="separator:aa21ed3a2f422d9657ac5b0ce6e5c1a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a277f704ff1de46c2d69cbc245037dd17"><td class="memItemLeft" align="right" valign="top"><a id="a277f704ff1de46c2d69cbc245037dd17"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d9d/class_scene_base.html#a277f704ff1de46c2d69cbc245037dd17">numWalls</a> () const</td></tr>
+<tr class="memdesc:a277f704ff1de46c2d69cbc245037dd17"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回当前场景中的墙数量 <br /></td></tr>
+<tr class="separator:a277f704ff1de46c2d69cbc245037dd17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabf8eb421acefb06424af6f2cd58e5cb"><td class="memItemLeft" align="right" valign="top"><a id="aabf8eb421acefb06424af6f2cd58e5cb"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d9d/class_scene_base.html#aabf8eb421acefb06424af6f2cd58e5cb">timeDelta</a> () const</td></tr>
+<tr class="memdesc:aabf8eb421acefb06424af6f2cd58e5cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回当前模拟的总时长 <br /></td></tr>
+<tr class="separator:aabf8eb421acefb06424af6f2cd58e5cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a459f8f8b577c808830d2fe2c289fcae3"><td class="memItemLeft" align="right" valign="top"><a id="a459f8f8b577c808830d2fe2c289fcae3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d9d/class_scene_base.html#a459f8f8b577c808830d2fe2c289fcae3">loopCount</a> () const</td></tr>
+<tr class="memdesc:a459f8f8b577c808830d2fe2c289fcae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">return number of simulation loops <br /></td></tr>
+<tr class="separator:a459f8f8b577c808830d2fe2c289fcae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31d117c513c8bde9531c29405e003955"><td class="memItemLeft" align="right" valign="top"><a id="a31d117c513c8bde9531c29405e003955"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d9d/class_scene_base.html#a31d117c513c8bde9531c29405e003955">runtimeDelta</a> () const</td></tr>
+<tr class="memdesc:a31d117c513c8bde9531c29405e003955"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回程序运行的总时长 <br /></td></tr>
+<tr class="separator:a31d117c513c8bde9531c29405e003955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abadcf84f32991b33d1badc9e5ed806a4"><td class="memItemLeft" align="right" valign="top"><a id="abadcf84f32991b33d1badc9e5ed806a4"></a>
+const int &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>period_render</b> () const</td></tr>
+<tr class="separator:abadcf84f32991b33d1badc9e5ed806a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5f8108e1d29f683468beaa7e55b4275"><td class="memItemLeft" align="right" valign="top"><a id="af5f8108e1d29f683468beaa7e55b4275"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_period_render</b> (const int &amp;period)</td></tr>
+<tr class="separator:af5f8108e1d29f683468beaa7e55b4275"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a289b3a20cb695c72450cb0350b0f85a8"><td class="memItemLeft" align="right" valign="top"><a id="a289b3a20cb695c72450cb0350b0f85a8"></a>
+const int &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>period_neighbor</b> () const</td></tr>
+<tr class="separator:a289b3a20cb695c72450cb0350b0f85a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e8bd077fa739979cb2656a38c7dbee6"><td class="memItemLeft" align="right" valign="top"><a id="a0e8bd077fa739979cb2656a38c7dbee6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_period_neighbor</b> (const int &amp;period)</td></tr>
+<tr class="separator:a0e8bd077fa739979cb2656a38c7dbee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefae7bb8e06da4d0bec5069525d063e0"><td class="memItemLeft" align="right" valign="top"><a id="aefae7bb8e06da4d0bec5069525d063e0"></a>
+const double &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>scale</b> () const</td></tr>
+<tr class="separator:aefae7bb8e06da4d0bec5069525d063e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5d361bcc8bc1165cc928eb27edbd40b"><td class="memItemLeft" align="right" valign="top"><a id="ae5d361bcc8bc1165cc928eb27edbd40b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_scale</b> (const double &amp;scale)</td></tr>
+<tr class="separator:ae5d361bcc8bc1165cc928eb27edbd40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a2f87ccc1ff2eeb5b88e513038116e354"><td class="memItemLeft" align="right" valign="top"><a id="a2f87ccc1ff2eeb5b88e513038116e354"></a>
+InteractionContainer&#160;</td><td class="memItemRight" valign="bottom"><b>_interactionContainer</b></td></tr>
+<tr class="separator:a2f87ccc1ff2eeb5b88e513038116e354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa59d025893b7e5c6f175c9b49b57907c"><td class="memItemLeft" align="right" valign="top"><a id="aa59d025893b7e5c6f175c9b49b57907c"></a>
+std::shared_ptr&lt; <a class="el" href="../../d8/d9b/class_engine.html">Engine</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d9d/class_scene_base.html#aa59d025893b7e5c6f175c9b49b57907c">_dtCalculator</a></td></tr>
+<tr class="memdesc:aa59d025893b7e5c6f175c9b49b57907c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time step calculator <br /></td></tr>
+<tr class="separator:aa59d025893b7e5c6f175c9b49b57907c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ba570b46f17c16195ccfd4090d8e752"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../d8/d9b/class_engine.html">Engine</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d9d/class_scene_base.html#a1ba570b46f17c16195ccfd4090d8e752">_forceResetter</a></td></tr>
+<tr class="separator:a1ba570b46f17c16195ccfd4090d8e752"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6336d7a026c02753eefa7af7500b7793"><td class="memItemLeft" align="right" valign="top"><a id="a6336d7a026c02753eefa7af7500b7793"></a>
+std::shared_ptr&lt; <a class="el" href="../../d8/d9b/class_engine.html">Engine</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_gravityEngine</b></td></tr>
+<tr class="separator:a6336d7a026c02753eefa7af7500b7793"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adba1b5820e3373bcd64a87c5d727c8b2"><td class="memItemLeft" align="right" valign="top"><a id="adba1b5820e3373bcd64a87c5d727c8b2"></a>
+std::shared_ptr&lt; <a class="el" href="../../d8/d9b/class_engine.html">Engine</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_servoEngine</b></td></tr>
+<tr class="separator:adba1b5820e3373bcd64a87c5d727c8b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fc015680af55938e813c94112a1098d"><td class="memItemLeft" align="right" valign="top"><a id="a3fc015680af55938e813c94112a1098d"></a>
+std::shared_ptr&lt; <a class="el" href="../../d8/d9b/class_engine.html">Engine</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_removeWallEngine</b></td></tr>
+<tr class="separator:a3fc015680af55938e813c94112a1098d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab31cba2bc89ace2ffe5c85a28b187565"><td class="memItemLeft" align="right" valign="top"><a id="ab31cba2bc89ace2ffe5c85a28b187565"></a>
+std::shared_ptr&lt; <a class="el" href="../../d8/d9b/class_engine.html">Engine</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_localDamping</b></td></tr>
+<tr class="separator:ab31cba2bc89ace2ffe5c85a28b187565"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a473eb8b2065258c1dcf3f2d82322a89c"><td class="memItemLeft" align="right" valign="top"><a id="a473eb8b2065258c1dcf3f2d82322a89c"></a>
+std::shared_ptr&lt; <a class="el" href="../../d8/d9b/class_engine.html">Engine</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_energyMonitor</b></td></tr>
+<tr class="separator:a473eb8b2065258c1dcf3f2d82322a89c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c821e8b7af8f164145ef2f3963b719f"><td class="memItemLeft" align="right" valign="top"><a id="a3c821e8b7af8f164145ef2f3963b719f"></a>
+std::shared_ptr&lt; <a class="el" href="../../d3/d1a/class_recorder.html">Recorder</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_recorder</b></td></tr>
+<tr class="separator:a3c821e8b7af8f164145ef2f3963b719f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6510534c5b692ca36afaa722c7e39535"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d9d/class_scene_base.html#a6510534c5b692ca36afaa722c7e39535">_contactStiffTotal</a></td></tr>
+<tr class="separator:a6510534c5b692ca36afaa722c7e39535"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Scene类, 是模拟的最大容器, 包含所有的颗粒, 函数等 </p>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000011">待办事项:</a></b></dt><dd>refactor scenebase </dd></dl>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a097960641c5c9ac4899039c390411122"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a097960641c5c9ac4899039c390411122">&#9670;&nbsp;</a></span>simulationLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SceneBase::simulationLoop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Simulation Loop </p>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000008">待办事项:</a></b></dt><dd>BodyContainer的迭代器 </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000009">待办事项:</a></b></dt><dd>BodyContainer的迭代器 </dd></dl>
+<p>&lt; </p><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000010">待办事项:</a></b></dt><dd>remove </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a6510534c5b692ca36afaa722c7e39535"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6510534c5b692ca36afaa722c7e39535">&#9670;&nbsp;</a></span>_contactStiffTotal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; SceneBase::_contactStiffTotal</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000013">待办事项:</a></b></dt><dd>上下左右4个墙接触的颗粒刚度总和, remove </dd></dl>
+
+</div>
+</div>
+<a id="a1ba570b46f17c16195ccfd4090d8e752"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ba570b46f17c16195ccfd4090d8e752">&#9670;&nbsp;</a></span>_forceResetter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="../../d8/d9b/class_engine.html">Engine</a>&gt; SceneBase::_forceResetter</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000012">待办事项:</a></b></dt><dd>将Engine存储为顺序执行的容器 </dd></dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="../../d6/d8f/_scene_base_8h_source.html">SceneBase.h</a></li>
+<li>SceneBase.cpp</li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dd/d9d/class_scene_base.html">SceneBase</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

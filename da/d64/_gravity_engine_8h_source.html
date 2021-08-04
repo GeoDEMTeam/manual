@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SimpleDEM: GravityEngine.h 源文件</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../temp_logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SimpleDEM
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Discrete Element Methods Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('da/d64/_gravity_engine_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">GravityEngine.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;core/Functions/Engine.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;core/SceneBase.h&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="../../d1/dcb/class_gravity_engine.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d1/dcb/class_gravity_engine.html">GravityEngine</a> : <span class="keyword">public</span> <a class="code" href="../../d8/d9b/class_engine.html">Engine</a> {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    std::shared_ptr&lt;SceneBase&gt; _scene;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="../../d1/dcb/class_gravity_engine.html">GravityEngine</a>(<span class="keyword">const</span> std::shared_ptr&lt;SceneBase&gt; scene) : _scene(scene) {}</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../d1/dcb/class_gravity_engine.html#afcc72d7b8ef36b2ef54159e67877c89c">   11</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/dcb/class_gravity_engine.html#afcc72d7b8ef36b2ef54159e67877c89c">run</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; num = _scene-&gt;bodyContainer().getNum();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#pragma omp parallel for</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num; i++) {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            _scene-&gt;bodyContainer()[i]-&gt;applyGravity();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="../../d1/dcb/class_gravity_engine.html#adae2ced69e45370d7ba3546248c09666">   20</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/dcb/class_gravity_engine.html#adae2ced69e45370d7ba3546248c09666">run_parallel</a>(tf::Subflow&amp; subflow)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">auto</span> num = _scene-&gt;bodyContainer().getNum();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        subflow</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            .for_each_index_static(0, num, 1,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                                   [&amp;](<span class="keywordtype">int</span> i) { _scene-&gt;bodyContainer()[i]-&gt;applyGravity(); })</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            .name(<span class="stringliteral">&quot;Apply gravity&quot;</span>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
+<div class="ttc" id="aclass_engine_html"><div class="ttname"><a href="../../d8/d9b/class_engine.html">Engine</a></div><div class="ttdoc">Baseclass for all global &amp; partial engines</div><div class="ttdef"><b>Definition:</b> Engine.h:5</div></div>
+<div class="ttc" id="aclass_gravity_engine_html"><div class="ttname"><a href="../../d1/dcb/class_gravity_engine.html">GravityEngine</a></div><div class="ttdef"><b>Definition:</b> GravityEngine.h:6</div></div>
+<div class="ttc" id="aclass_gravity_engine_html_adae2ced69e45370d7ba3546248c09666"><div class="ttname"><a href="../../d1/dcb/class_gravity_engine.html#adae2ced69e45370d7ba3546248c09666">GravityEngine::run_parallel</a></div><div class="ttdeci">void run_parallel(tf::Subflow &amp;subflow) override</div><div class="ttdoc">parallel version of function run(). Developer should override the function to support parallel comput...</div><div class="ttdef"><b>Definition:</b> GravityEngine.h:20</div></div>
+<div class="ttc" id="aclass_gravity_engine_html_afcc72d7b8ef36b2ef54159e67877c89c"><div class="ttname"><a href="../../d1/dcb/class_gravity_engine.html#afcc72d7b8ef36b2ef54159e67877c89c">GravityEngine::run</a></div><div class="ttdeci">void run() override</div><div class="ttdoc">Pure virtual operator, all the subclasses who need instantiation must implement the operator</div><div class="ttdef"><b>Definition:</b> GravityEngine.h:11</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_d2bdd8205b81aa505d96e4fc22c7ef04.html">SimpleDEM</a></li><li class="navelem"><a class="el" href="../../dir_0a0c75e27d72a3a6558198456060c458.html">include</a></li><li class="navelem"><a class="el" href="../../dir_2966195331fac0456cc193b1d1d3ee57.html">pkg</a></li><li class="navelem"><a class="el" href="../../dir_c02e6ec20bd91b53e03db679c8ce6a1d.html">Functions</a></li><li class="navelem"><b>GravityEngine.h</b></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SimpleDEM: Engine类 参考</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../temp_logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SimpleDEM
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Discrete Element Methods Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d8/d9b/class_engine.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="../../d3/df7/class_engine-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">Engine类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Baseclass for all global &amp; partial engines  
+ <a href="../../d8/d9b/class_engine.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../de/dcf/_engine_8h_source.html">Engine.h</a>&gt;</code></p>
+<div class="dynheader">
+类 Engine 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d8/d9b/class_engine.png" usemap="#Engine_map" alt=""/>
+  <map id="Engine_map" name="Engine_map">
+<area href="../../d3/d66/class_biaxial_control.html" alt="BiaxialControl" shape="rect" coords="147,56,284,80"/>
+<area href="../../d8/d82/class_critical_timestep.html" title="CriticalTimestep Class for determination of the Critical Time Step of the simulation...." alt="CriticalTimestep" shape="rect" coords="147,112,284,136"/>
+<area href="../../d9/d1d/class_direct_shear_control2_d.html" alt="DirectShearControl2D" shape="rect" coords="147,168,284,192"/>
+<area href="../../d5/d19/class_direct_shear_control3_d.html" alt="DirectShearControl3D" shape="rect" coords="147,224,284,248"/>
+<area href="../../d5/d60/class_energy_monitor.html" alt="EnergyMonitor" shape="rect" coords="147,280,284,304"/>
+<area href="../../db/da3/class_energy_tracing.html" alt="EnergyTracing" shape="rect" coords="147,336,284,360"/>
+<area href="../../d9/d97/class_force_resetter.html" title="ForceResster函数, 在每一次simulation loop中重置左右颗粒的广义力, 一般在碰撞检测之前执行" alt="ForceResetter" shape="rect" coords="147,392,284,416"/>
+<area href="../../d1/dcb/class_gravity_engine.html" alt="GravityEngine" shape="rect" coords="147,448,284,472"/>
+<area href="../../d0/d7e/class_local_damping_engine.html" alt="LocalDampingEngine" shape="rect" coords="147,504,284,528"/>
+<area href="../../dc/dac/class_oedometer_control2_d.html" alt="OedometerControl2D" shape="rect" coords="147,560,284,584"/>
+<area href="../../d2/da1/class_oedometer_control3_d.html" alt="OedometerControl3D" shape="rect" coords="147,616,284,640"/>
+<area href="../../db/d33/class_remove_wall_engine.html" title="移动墙, 以进行休止角实验" alt="RemoveWallEngine" shape="rect" coords="147,672,284,696"/>
+<area href="../../dd/d04/class_servo3_d_engine.html" alt="Servo3DEngine" shape="rect" coords="147,728,284,752"/>
+<area href="../../d3/d74/class_servo_engine.html" alt="ServoEngine" shape="rect" coords="147,784,284,808"/>
+<area href="../../de/d22/class_triaxial_control.html" alt="TriaxialControl" shape="rect" coords="147,840,284,864"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a41f2d854040e17d9c4d7b324a4bfbf39"><td class="memItemLeft" align="right" valign="top"><a id="a41f2d854040e17d9c4d7b324a4bfbf39"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d9b/class_engine.html#a41f2d854040e17d9c4d7b324a4bfbf39">~Engine</a> ()</td></tr>
+<tr class="memdesc:a41f2d854040e17d9c4d7b324a4bfbf39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor of class <a class="el" href="../../d8/d9b/class_engine.html" title="Baseclass for all global &amp; partial engines">Engine</a>, virtual <br /></td></tr>
+<tr class="separator:a41f2d854040e17d9c4d7b324a4bfbf39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcf580413b38f7f6982367bdf09735c3"><td class="memItemLeft" align="right" valign="top"><a id="abcf580413b38f7f6982367bdf09735c3"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d9b/class_engine.html#abcf580413b38f7f6982367bdf09735c3">run</a> ()=0</td></tr>
+<tr class="memdesc:abcf580413b38f7f6982367bdf09735c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual operator, all the subclasses who need instantiation must implement the operator <br /></td></tr>
+<tr class="separator:abcf580413b38f7f6982367bdf09735c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a322036029036a4202a3fe3a0339a511f"><td class="memItemLeft" align="right" valign="top"><a id="a322036029036a4202a3fe3a0339a511f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d9b/class_engine.html#a322036029036a4202a3fe3a0339a511f">run_parallel</a> (tf::Subflow &amp;subflow)</td></tr>
+<tr class="memdesc:a322036029036a4202a3fe3a0339a511f"><td class="mdescLeft">&#160;</td><td class="mdescRight">parallel version of function <code><a class="el" href="../../d8/d9b/class_engine.html#abcf580413b38f7f6982367bdf09735c3" title="Pure virtual operator, all the subclasses who need instantiation must implement the operator">run()</a></code>. Developer should override the function to support parallel computing <br /></td></tr>
+<tr class="separator:a322036029036a4202a3fe3a0339a511f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Baseclass for all global &amp; partial engines </p>
+</div><hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="../../de/dcf/_engine_8h_source.html">Engine.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d8/d9b/class_engine.html">Engine</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

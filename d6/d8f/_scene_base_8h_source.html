@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SimpleDEM: SceneBase.h 源文件</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../temp_logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SimpleDEM
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Discrete Element Methods Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d6/d8f/_scene_base_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">SceneBase.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;Datas/Body.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Datas/BodyContainer.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;Datas/Bound.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;Datas/InteractionContainer.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;Datas/Material.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;Datas/MaterialContainer.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;Datas/Shape.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;Datas/State.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;Functions/BIntersectDispatcher.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;Functions/Engine.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;Functions/IGeomDispatcher.h&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;Functions/Integrator.h&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;Functions/LawDispatcher.h&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;Functions/Recorder.h&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;Functions/Searcher.h&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;taskflow/taskflow.hpp&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../dd/d9d/class_scene_base.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dd/d9d/class_scene_base.html">SceneBase</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="../../db/d60/class_body_container.html">BodyContainer</a> _bodyContainer;    </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="../../db/d60/class_body_container.html">BodyContainer</a> _wallContainer;    </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="../../db/dd2/class_material_container.html">MaterialContainer</a> _matContainer; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">double</span> _startRuntime;            </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">double</span> _timeDelta;               </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">double</span> _dt;                      </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span> _loopCount;                  </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">int</span> _numTotalBodies;             </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">bool</span> _stop;                      </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">int</span> period_render_; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">int</span> period_neighbors_; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">double</span> scale_ = 1.0;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="../../d8/def/class_i_geom_dispatcher.html">IGeomDispatcher</a> _igeomDisp;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="../../d2/d08/class_law_dispatcher.html">LawDispatcher</a> _lawDisp;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="../../d1/d7f/class_b_intersect_dispatcher.html">BIntersectDispatcher</a> _bIntersectDisp;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">/* Engines */</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    std::shared_ptr&lt;Integrator&gt; _integrator; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    std::shared_ptr&lt;Searcher&gt; _searcher;     </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="../../dd/d9d/class_scene_base.html#afa8a499e746ab986715658d30dc7e140">SceneBase</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; dt = 1e-5);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">// typedef std::vector&lt;Interaction&gt; InteractionContainer;</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    InteractionContainer _interactionContainer;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">/* pre Engines */</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../dd/d9d/class_scene_base.html#aa59d025893b7e5c6f175c9b49b57907c">   59</a></span>&#160;    std::shared_ptr&lt;Engine&gt; <a class="code" href="../../dd/d9d/class_scene_base.html#aa59d025893b7e5c6f175c9b49b57907c">_dtCalculator</a>; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">/* Engines excuted during the simulation loop */</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">// std::vector&lt;std::shared_ptr&lt;Engine&gt;&gt; _engines;</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="../../dd/d9d/class_scene_base.html#a1ba570b46f17c16195ccfd4090d8e752">   64</a></span>&#160;    std::shared_ptr&lt;Engine&gt; <a class="code" href="../../dd/d9d/class_scene_base.html#a1ba570b46f17c16195ccfd4090d8e752">_forceResetter</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    std::shared_ptr&lt;Engine&gt; _gravityEngine;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    std::shared_ptr&lt;Engine&gt; _servoEngine;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    std::shared_ptr&lt;Engine&gt; _removeWallEngine;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    std::shared_ptr&lt;Engine&gt; _localDamping;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    std::shared_ptr&lt;Engine&gt; _energyMonitor;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    std::shared_ptr&lt;Recorder&gt; _recorder;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="../../dd/d9d/class_scene_base.html#a6510534c5b692ca36afaa722c7e39535">   73</a></span>&#160;    std::vector&lt;double&gt; <a class="code" href="../../dd/d9d/class_scene_base.html#a6510534c5b692ca36afaa722c7e39535">_contactStiffTotal</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../dd/d9d/class_scene_base.html">SceneBase</a>(){};</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="../../dd/d9d/class_scene_base.html#a094ca3948ffdf5a210d36e11a883953c">   78</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dd/d9d/class_scene_base.html#a094ca3948ffdf5a210d36e11a883953c">addMaterial</a>(std::shared_ptr&lt;Material&gt;&amp; mat) { _matContainer.add(mat); }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dd/d9d/class_scene_base.html#ad4f630e51b17796785de19ac65284d04">addBody</a>(<span class="keyword">const</span> std::shared_ptr&lt;Shape&gt;&amp; shp, <span class="keyword">const</span> std::shared_ptr&lt;Material&gt;&amp; mat,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                 <span class="keyword">const</span> std::shared_ptr&lt;State&gt;&amp; stat, <span class="keyword">const</span> std::shared_ptr&lt;Bound&gt;&amp; bnd);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span> addWalls(<span class="keyword">const</span> std::shared_ptr&lt;Shape&gt;&amp; shp, <span class="keyword">const</span> std::shared_ptr&lt;Material&gt;&amp; mat,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                  <span class="keyword">const</span> std::shared_ptr&lt;State&gt;&amp; stat, <span class="keyword">const</span> std::shared_ptr&lt;Bound&gt;&amp; bnd,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                  <span class="keyword">const</span> <span class="keywordtype">bool</span>&amp; dynamic = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> SomeLhs, <span class="keyword">class</span> SomeRhs&gt;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="../../dd/d9d/class_scene_base.html#a6d84eb7eb70342304b9e7fd0503579aa">   90</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dd/d9d/class_scene_base.html#a6d84eb7eb70342304b9e7fd0503579aa">addFunctor</a>(<span class="keyword">const</span> std::shared_ptr&lt;IGeomFunctor&gt;&amp; pFun) {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        _igeomDisp.add&lt;SomeLhs, SomeRhs&gt;(pFun);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> SomeLhs, <span class="keyword">class</span> SomeRhs&gt;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">void</span> addIPhysFunctor(<span class="keyword">const</span> std::shared_ptr&lt;IPhysFunctor&gt;&amp; pFun) {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        _matContainer.<a class="code" href="../../db/dd2/class_material_container.html#a9587469e18a258cb7b14754b22342d55">addIPhysFunctor</a>&lt;SomeLhs, SomeRhs&gt;(pFun);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> SomeLhs, <span class="keyword">class</span> SomeRhs&gt;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">void</span> addLawFunctor(<span class="keyword">const</span> std::shared_ptr&lt;LawFunctor&gt;&amp; pFun) {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        _lawDisp.add&lt;SomeLhs, SomeRhs&gt;(pFun);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> SomeLhs, <span class="keyword">class</span> SomeRhs&gt;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">void</span> addBIntersectFunctor(<span class="keyword">const</span> std::shared_ptr&lt;BIntersectFunctor&gt;&amp; pFun) {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        _bIntersectDisp.<a class="code" href="../../d1/d7f/class_b_intersect_dispatcher.html#aced19a49366ade0cbccc8268f9c1ccd5">add</a>&lt;SomeLhs, SomeRhs&gt;(pFun);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dd/d9d/class_scene_base.html#a810ec5bfa722df5c3296229081fd7aff">draw</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dd/d9d/class_scene_base.html#a95215d55f7b9d0ba4a278b4370c69110">preSimulation</a>();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dd/d9d/class_scene_base.html#a097960641c5c9ac4899039c390411122">simulationLoop</a>();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">void</span> init_taskflow(tf::Taskflow&amp; taskflow);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="comment">/* Getters &amp; Setters */</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <a class="code" href="../../db/d60/class_body_container.html">BodyContainer</a>&amp; bodyContainer() { <span class="keywordflow">return</span> _bodyContainer; }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <a class="code" href="../../db/d60/class_body_container.html">BodyContainer</a>&amp; wallContainer() { <span class="keywordflow">return</span> _wallContainer; }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    InteractionContainer&amp; interactionContainer() { <span class="keywordflow">return</span> _interactionContainer; }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="comment">// stop?</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">void</span> setStop(<span class="keyword">const</span> <span class="keywordtype">bool</span>&amp; stop) { _stop = stop; }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">bool</span>&amp; stop()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _stop; }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="../../dd/d9d/class_scene_base.html#a5ab7c99a957e911932b2490635bc8bab">  128</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="../../dd/d9d/class_scene_base.html#a5ab7c99a957e911932b2490635bc8bab">delta</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _dt; }</div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="../../dd/d9d/class_scene_base.html#a0d6554795d9fb8e6dff2081d2cf1b56d">  130</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dd/d9d/class_scene_base.html#a0d6554795d9fb8e6dff2081d2cf1b56d">updateDelta</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; newDt) { _dt = newDt; }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="../../dd/d9d/class_scene_base.html#aa21ed3a2f422d9657ac5b0ce6e5c1a65">numBodies</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="../../dd/d9d/class_scene_base.html#a277f704ff1de46c2d69cbc245037dd17">numWalls</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="../../dd/d9d/class_scene_base.html#aabf8eb421acefb06424af6f2cd58e5cb">timeDelta</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../dd/d9d/class_scene_base.html#a459f8f8b577c808830d2fe2c289fcae3">loopCount</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="../../dd/d9d/class_scene_base.html#a31d117c513c8bde9531c29405e003955">runtimeDelta</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; period_render()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> period_render_; }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordtype">void</span> set_period_render(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; period) { period_render_ = period; }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; period_neighbor()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> period_neighbors_; }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordtype">void</span> set_period_neighbor(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; period) { period_neighbors_ = period; }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; scale()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> scale_; }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordtype">void</span> set_scale(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; scale) { scale_ = scale; }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;};</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="../../dd/d9d/class_scene_base.html#aa21ed3a2f422d9657ac5b0ce6e5c1a65">  155</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="../../dd/d9d/class_scene_base.html#aa21ed3a2f422d9657ac5b0ce6e5c1a65">SceneBase::numBodies</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _bodyContainer.getNum(); }</div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="../../dd/d9d/class_scene_base.html#a277f704ff1de46c2d69cbc245037dd17">  156</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="../../dd/d9d/class_scene_base.html#a277f704ff1de46c2d69cbc245037dd17">SceneBase::numWalls</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _wallContainer.getNum(); }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="../../dd/d9d/class_scene_base.html#aabf8eb421acefb06424af6f2cd58e5cb">  158</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="../../dd/d9d/class_scene_base.html#aabf8eb421acefb06424af6f2cd58e5cb">SceneBase::timeDelta</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _timeDelta; }</div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="../../dd/d9d/class_scene_base.html#a459f8f8b577c808830d2fe2c289fcae3">  159</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="../../dd/d9d/class_scene_base.html#a459f8f8b577c808830d2fe2c289fcae3">SceneBase::loopCount</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _loopCount; }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="../../dd/d9d/class_scene_base.html#a31d117c513c8bde9531c29405e003955">  161</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="../../dd/d9d/class_scene_base.html#a31d117c513c8bde9531c29405e003955">SceneBase::runtimeDelta</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>((clock() / CLOCKS_PER_SEC)) - _startRuntime;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;}</div>
+<div class="ttc" id="aclass_b_intersect_dispatcher_html"><div class="ttname"><a href="../../d1/d7f/class_b_intersect_dispatcher.html">BIntersectDispatcher</a></div><div class="ttdoc">Dispatcher, 提供添加和调用判断两个Bound是否相交的函数子</div><div class="ttdef"><b>Definition:</b> BIntersectDispatcher.h:8</div></div>
+<div class="ttc" id="aclass_b_intersect_dispatcher_html_aced19a49366ade0cbccc8268f9c1ccd5"><div class="ttname"><a href="../../d1/d7f/class_b_intersect_dispatcher.html#aced19a49366ade0cbccc8268f9c1ccd5">BIntersectDispatcher::add</a></div><div class="ttdeci">void add(const std::shared_ptr&lt; BIntersectFunctor &gt; &amp;pFun)</div><div class="ttdoc">添加函数对象</div><div class="ttdef"><b>Definition:</b> BIntersectDispatcher.h:24</div></div>
+<div class="ttc" id="aclass_body_container_html"><div class="ttname"><a href="../../db/d60/class_body_container.html">BodyContainer</a></div><div class="ttdef"><b>Definition:</b> BodyContainer.h:5</div></div>
+<div class="ttc" id="aclass_i_geom_dispatcher_html"><div class="ttname"><a href="../../d8/def/class_i_geom_dispatcher.html">IGeomDispatcher</a></div><div class="ttdef"><b>Definition:</b> IGeomDispatcher.h:7</div></div>
+<div class="ttc" id="aclass_law_dispatcher_html"><div class="ttname"><a href="../../d2/d08/class_law_dispatcher.html">LawDispatcher</a></div><div class="ttdef"><b>Definition:</b> LawDispatcher.h:5</div></div>
+<div class="ttc" id="aclass_material_container_html"><div class="ttname"><a href="../../db/dd2/class_material_container.html">MaterialContainer</a></div><div class="ttdef"><b>Definition:</b> MaterialContainer.h:8</div></div>
+<div class="ttc" id="aclass_material_container_html_a9587469e18a258cb7b14754b22342d55"><div class="ttname"><a href="../../db/dd2/class_material_container.html#a9587469e18a258cb7b14754b22342d55">MaterialContainer::addIPhysFunctor</a></div><div class="ttdeci">void addIPhysFunctor(const std::shared_ptr&lt; IPhysFunctor &gt; &amp;pFun)</div><div class="ttdoc">添加callable functor</div><div class="ttdef"><b>Definition:</b> MaterialContainer.h:21</div></div>
+<div class="ttc" id="aclass_scene_base_html"><div class="ttname"><a href="../../dd/d9d/class_scene_base.html">SceneBase</a></div><div class="ttdoc">Scene类, 是模拟的最大容器, 包含所有的颗粒, 函数等</div><div class="ttdef"><b>Definition:</b> SceneBase.h:23</div></div>
+<div class="ttc" id="aclass_scene_base_html_a094ca3948ffdf5a210d36e11a883953c"><div class="ttname"><a href="../../dd/d9d/class_scene_base.html#a094ca3948ffdf5a210d36e11a883953c">SceneBase::addMaterial</a></div><div class="ttdeci">void addMaterial(std::shared_ptr&lt; Material &gt; &amp;mat)</div><div class="ttdoc">添加材料</div><div class="ttdef"><b>Definition:</b> SceneBase.h:78</div></div>
+<div class="ttc" id="aclass_scene_base_html_a097960641c5c9ac4899039c390411122"><div class="ttname"><a href="../../dd/d9d/class_scene_base.html#a097960641c5c9ac4899039c390411122">SceneBase::simulationLoop</a></div><div class="ttdeci">void simulationLoop()</div><div class="ttdoc">Simulation Loop</div><div class="ttdef"><b>Definition:</b> SceneBase.cpp:60</div></div>
+<div class="ttc" id="aclass_scene_base_html_a0d6554795d9fb8e6dff2081d2cf1b56d"><div class="ttname"><a href="../../dd/d9d/class_scene_base.html#a0d6554795d9fb8e6dff2081d2cf1b56d">SceneBase::updateDelta</a></div><div class="ttdeci">void updateDelta(const double &amp;newDt)</div><div class="ttdoc">Update/Set simulation time step</div><div class="ttdef"><b>Definition:</b> SceneBase.h:130</div></div>
+<div class="ttc" id="aclass_scene_base_html_a1ba570b46f17c16195ccfd4090d8e752"><div class="ttname"><a href="../../dd/d9d/class_scene_base.html#a1ba570b46f17c16195ccfd4090d8e752">SceneBase::_forceResetter</a></div><div class="ttdeci">std::shared_ptr&lt; Engine &gt; _forceResetter</div><div class="ttdef"><b>Definition:</b> SceneBase.h:64</div></div>
+<div class="ttc" id="aclass_scene_base_html_a277f704ff1de46c2d69cbc245037dd17"><div class="ttname"><a href="../../dd/d9d/class_scene_base.html#a277f704ff1de46c2d69cbc245037dd17">SceneBase::numWalls</a></div><div class="ttdeci">const int numWalls() const</div><div class="ttdoc">返回当前场景中的墙数量</div><div class="ttdef"><b>Definition:</b> SceneBase.h:156</div></div>
+<div class="ttc" id="aclass_scene_base_html_a31d117c513c8bde9531c29405e003955"><div class="ttname"><a href="../../dd/d9d/class_scene_base.html#a31d117c513c8bde9531c29405e003955">SceneBase::runtimeDelta</a></div><div class="ttdeci">const double runtimeDelta() const</div><div class="ttdoc">返回程序运行的总时长</div><div class="ttdef"><b>Definition:</b> SceneBase.h:161</div></div>
+<div class="ttc" id="aclass_scene_base_html_a459f8f8b577c808830d2fe2c289fcae3"><div class="ttname"><a href="../../dd/d9d/class_scene_base.html#a459f8f8b577c808830d2fe2c289fcae3">SceneBase::loopCount</a></div><div class="ttdeci">int loopCount() const</div><div class="ttdoc">return number of simulation loops</div><div class="ttdef"><b>Definition:</b> SceneBase.h:159</div></div>
+<div class="ttc" id="aclass_scene_base_html_a5ab7c99a957e911932b2490635bc8bab"><div class="ttname"><a href="../../dd/d9d/class_scene_base.html#a5ab7c99a957e911932b2490635bc8bab">SceneBase::delta</a></div><div class="ttdeci">const double delta() const</div><div class="ttdoc">Return simulation time step</div><div class="ttdef"><b>Definition:</b> SceneBase.h:128</div></div>
+<div class="ttc" id="aclass_scene_base_html_a6510534c5b692ca36afaa722c7e39535"><div class="ttname"><a href="../../dd/d9d/class_scene_base.html#a6510534c5b692ca36afaa722c7e39535">SceneBase::_contactStiffTotal</a></div><div class="ttdeci">std::vector&lt; double &gt; _contactStiffTotal</div><div class="ttdef"><b>Definition:</b> SceneBase.h:73</div></div>
+<div class="ttc" id="aclass_scene_base_html_a6d84eb7eb70342304b9e7fd0503579aa"><div class="ttname"><a href="../../dd/d9d/class_scene_base.html#a6d84eb7eb70342304b9e7fd0503579aa">SceneBase::addFunctor</a></div><div class="ttdeci">void addFunctor(const std::shared_ptr&lt; IGeomFunctor &gt; &amp;pFun)</div><div class="ttdoc">添加callable functor</div><div class="ttdef"><b>Definition:</b> SceneBase.h:90</div></div>
+<div class="ttc" id="aclass_scene_base_html_a810ec5bfa722df5c3296229081fd7aff"><div class="ttname"><a href="../../dd/d9d/class_scene_base.html#a810ec5bfa722df5c3296229081fd7aff">SceneBase::draw</a></div><div class="ttdeci">void draw() const</div><div class="ttdoc">绘制场景, 需要调用每个Body的draw函数进行绘制</div><div class="ttdef"><b>Definition:</b> SceneBase.cpp:34</div></div>
+<div class="ttc" id="aclass_scene_base_html_a95215d55f7b9d0ba4a278b4370c69110"><div class="ttname"><a href="../../dd/d9d/class_scene_base.html#a95215d55f7b9d0ba4a278b4370c69110">SceneBase::preSimulation</a></div><div class="ttdeci">void preSimulation()</div><div class="ttdoc">Simulation预备计算</div><div class="ttdef"><b>Definition:</b> SceneBase.cpp:45</div></div>
+<div class="ttc" id="aclass_scene_base_html_aa21ed3a2f422d9657ac5b0ce6e5c1a65"><div class="ttname"><a href="../../dd/d9d/class_scene_base.html#aa21ed3a2f422d9657ac5b0ce6e5c1a65">SceneBase::numBodies</a></div><div class="ttdeci">const int numBodies() const</div><div class="ttdoc">返回当前场景中的颗粒数</div><div class="ttdef"><b>Definition:</b> SceneBase.h:155</div></div>
+<div class="ttc" id="aclass_scene_base_html_aa59d025893b7e5c6f175c9b49b57907c"><div class="ttname"><a href="../../dd/d9d/class_scene_base.html#aa59d025893b7e5c6f175c9b49b57907c">SceneBase::_dtCalculator</a></div><div class="ttdeci">std::shared_ptr&lt; Engine &gt; _dtCalculator</div><div class="ttdoc">Time step calculator</div><div class="ttdef"><b>Definition:</b> SceneBase.h:59</div></div>
+<div class="ttc" id="aclass_scene_base_html_aabf8eb421acefb06424af6f2cd58e5cb"><div class="ttname"><a href="../../dd/d9d/class_scene_base.html#aabf8eb421acefb06424af6f2cd58e5cb">SceneBase::timeDelta</a></div><div class="ttdeci">const double timeDelta() const</div><div class="ttdoc">返回当前模拟的总时长</div><div class="ttdef"><b>Definition:</b> SceneBase.h:158</div></div>
+<div class="ttc" id="aclass_scene_base_html_ad4f630e51b17796785de19ac65284d04"><div class="ttname"><a href="../../dd/d9d/class_scene_base.html#ad4f630e51b17796785de19ac65284d04">SceneBase::addBody</a></div><div class="ttdeci">void addBody(const std::shared_ptr&lt; Shape &gt; &amp;shp, const std::shared_ptr&lt; Material &gt; &amp;mat, const std::shared_ptr&lt; State &gt; &amp;stat, const std::shared_ptr&lt; Bound &gt; &amp;bnd)</div><div class="ttdoc">添加颗粒</div><div class="ttdef"><b>Definition:</b> SceneBase.cpp:16</div></div>
+<div class="ttc" id="aclass_scene_base_html_afa8a499e746ab986715658d30dc7e140"><div class="ttname"><a href="../../dd/d9d/class_scene_base.html#afa8a499e746ab986715658d30dc7e140">SceneBase::SceneBase</a></div><div class="ttdeci">SceneBase(const double &amp;dt=1e-5)</div><div class="ttdoc">构造函数</div><div class="ttdef"><b>Definition:</b> SceneBase.cpp:10</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_d2bdd8205b81aa505d96e4fc22c7ef04.html">SimpleDEM</a></li><li class="navelem"><a class="el" href="../../dir_0a0c75e27d72a3a6558198456060c458.html">include</a></li><li class="navelem"><a class="el" href="../../dir_8725efa00d60333bafbb1280c24a679f.html">core</a></li><li class="navelem"><b>SceneBase.h</b></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

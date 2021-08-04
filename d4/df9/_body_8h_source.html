@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SimpleDEM: Body.h 源文件</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../temp_logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SimpleDEM
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Discrete Element Methods Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d4/df9/_body_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Body.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;Bound.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;Interaction.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;InteractionContainer.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;Material.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;Shape.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;State.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;GL/freeglut.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">// namespace DEM {</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// namespace core {</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// namespace Data {</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d0/dcb/class_body.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d0/dcb/class_body.html">Body</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    std::shared_ptr&lt;Shape&gt; _shape;       </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::shared_ptr&lt;Material&gt; _material; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    std::shared_ptr&lt;State&gt; _state;       </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    std::shared_ptr&lt;Bound&gt; _bound;       </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">bool</span> _dynamic;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">double</span> _mass;    </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">double</span> _inertia; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    vec3 _force;     </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    vec3 _torque;    </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">int</span> _id;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    InteractionContainer _interactionContainer;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    InteractionContainer _interactionContainer_OLD;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// for drawing</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    vec4 color_ = vec4(1.0, 1.0, 1.0, 0.8);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="../../d0/dcb/class_body.html#a2419c43dc4bd5d674d55d84eab2c4862">   54</a></span>&#160;    <a class="code" href="../../d0/dcb/class_body.html#a2419c43dc4bd5d674d55d84eab2c4862">Body</a>(<span class="keyword">const</span> std::shared_ptr&lt;Shape&gt;&amp; shp, <span class="keyword">const</span> std::shared_ptr&lt;Material&gt;&amp; mat,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;         <span class="keyword">const</span> std::shared_ptr&lt;State&gt;&amp; stat, <span class="keyword">const</span> std::shared_ptr&lt;Bound&gt;&amp; bnd)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        : _shape(shp), _material(mat), _state(stat), _bound(bnd), _id(-1), _dynamic(true) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="comment">// 计算重力</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        _mass = shp-&gt;volume() * mat-&gt;density();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        _inertia = _shape-&gt;inertia() * _mass;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="comment">// update the bound</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        _bound-&gt;update(_shape, _state);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="../../d0/dcb/class_body.html#a42b3cbf061823b48887228a6f4420f7a">   65</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/dcb/class_body.html#a42b3cbf061823b48887228a6f4420f7a">updateBound</a>() {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">// auto halfVel = _state-&gt;halfVel() + _state-&gt;acc() * dt;</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">// auto pos = _state-&gt;position() + halfVel * dt;</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="comment">//_state-&gt;setPosition(pos);</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">//_state-&gt;setHalfVel(halfVel);</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        _bound-&gt;update(_shape, _state);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="../../d0/dcb/class_body.html#aee413511953b36456d4bf7babd213e38">   77</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../d0/dcb/class_body.html#aee413511953b36456d4bf7babd213e38">energy</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; level = 0, <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; g = -9.81)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="../../d0/dcb/class_body.html#aee413511953b36456d4bf7babd213e38">energy</a> = -_mass * g * _state-&gt;position()[1] +</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                        0.5 * _mass * std::pow(_state-&gt;velocity().norm(), 2);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d0/dcb/class_body.html#aee413511953b36456d4bf7babd213e38">energy</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="../../d0/dcb/class_body.html#aca700d59a6d111ef906968cd457b5647">   84</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/dcb/class_body.html#aca700d59a6d111ef906968cd457b5647">resetForce</a>() {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        _force.setZero();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        _torque.setZero();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="../../d0/dcb/class_body.html#a08fce935c1d737ca04cde1b89fec4f24">   91</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/dcb/class_body.html#a08fce935c1d737ca04cde1b89fec4f24">applyGravity</a>(<span class="keyword">const</span> vec3&amp; g = vec3(0, -9.81, 0)) { _force += (g * _mass); }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="../../d0/dcb/class_body.html#ab0ce6d3d421c05b497f42797f734f2a6">   95</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/dcb/class_body.html#ab0ce6d3d421c05b497f42797f734f2a6">addForce</a>(<span class="keyword">const</span> vec3&amp; f) { _force += f; }</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="../../d0/dcb/class_body.html#a641df089586d3fcd6c1a6bc667431b21">   98</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/dcb/class_body.html#a641df089586d3fcd6c1a6bc667431b21">addTorque</a>(<span class="keyword">const</span> vec3&amp; t) { _torque += t; }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="../../d0/dcb/class_body.html#a333d508486922fd146d30abe13512555">  104</a></span>&#160;    std::shared_ptr&lt;Interaction&gt; <a class="code" href="../../d0/dcb/class_body.html#a333d508486922fd146d30abe13512555">preInteraction</a>(<a class="code" href="../../d3/d8e/class_interaction.html">Interaction</a>&amp; interaction) {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keyword">auto</span> found = std::find(_interactionContainer_OLD.begin(), _interactionContainer_OLD.end(),</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                               interaction);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">if</span> (found == _interactionContainer_OLD.end()) {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">return</span> std::make_shared&lt;Interaction&gt;(*found);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="../../d0/dcb/class_body.html#a9681bbcf0ae374da5d02764895dc647a">  114</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/dcb/class_body.html#a9681bbcf0ae374da5d02764895dc647a">addInteraction</a>(<span class="keyword">const</span> <a class="code" href="../../d3/d8e/class_interaction.html">Interaction</a>&amp; interaction) {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        _interactionContainer.push_back(interaction);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="../../d0/dcb/class_body.html#a4388c8b65a190782116a0beb74a70075">  119</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/dcb/class_body.html#a4388c8b65a190782116a0beb74a70075">storePreInteraction</a>() {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        _interactionContainer_OLD = _interactionContainer;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        _interactionContainer.clear();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="../../d0/dcb/class_body.html#ada0eebc09fda646aeb28e0d9dffb77af">  127</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/dcb/class_body.html#ada0eebc09fda646aeb28e0d9dffb77af">applyLocalDamping</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; damping, <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; dt) {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        vec3 damp_force = _force;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="comment">// vec3 sgn = _force.cwiseProduct(_state-&gt;halfVel() + 0.5 * _force / _mass * dt);</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        vec3 sgn = _force.cwiseProduct(_state-&gt;velocity());</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        damp_force = damp_force.cwiseProduct(-damping * sgn.cwiseSign());</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        _force += damp_force;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        vec3 damp_torque = _torque;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="comment">// vec3 sgn = _force.cwiseProduct(_state-&gt;halfVel() + 0.5 * _force / _mass * dt);</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        vec3 sgn_torque = _force.cwiseProduct(_state-&gt;angVel());</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        damp_torque = damp_torque.cwiseProduct(-damping * sgn_torque.cwiseSign());</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        _torque += damp_torque;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="comment">/* Getters &amp; Setters */</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="../../d0/dcb/class_body.html#a08f23952578e7d94c56c5264d05ea3bf">  142</a></span>&#160;    std::shared_ptr&lt;State&gt;&amp; <a class="code" href="../../d0/dcb/class_body.html#a08f23952578e7d94c56c5264d05ea3bf">state</a>() { <span class="keywordflow">return</span> _state; }          </div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="../../d0/dcb/class_body.html#a183b88f522212e4b53af3d2bd9ebf8c1">  143</a></span>&#160;    std::shared_ptr&lt;Bound&gt;&amp; <a class="code" href="../../d0/dcb/class_body.html#a183b88f522212e4b53af3d2bd9ebf8c1">bound</a>() { <span class="keywordflow">return</span> _bound; }          </div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="../../d0/dcb/class_body.html#a11b4dff04e9d6e783df2d06a4d51cf3a">  144</a></span>&#160;    std::shared_ptr&lt;Shape&gt;&amp; <a class="code" href="../../d0/dcb/class_body.html#a11b4dff04e9d6e783df2d06a4d51cf3a">shape</a>() { <span class="keywordflow">return</span> _shape; }          </div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="../../d0/dcb/class_body.html#a9f5da2b98c2ee5868273a6478f7a209c">  145</a></span>&#160;    std::shared_ptr&lt;Material&gt;&amp; <a class="code" href="../../d0/dcb/class_body.html#a9f5da2b98c2ee5868273a6478f7a209c">material</a>() { <span class="keywordflow">return</span> _material; } </div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="../../d0/dcb/class_body.html#a3559da5d98aaab2840258a85ded3c506">  147</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">bool</span>&amp; <a class="code" href="../../d0/dcb/class_body.html#a3559da5d98aaab2840258a85ded3c506">dynamic</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _dynamic; };</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordtype">void</span> setDynamic(<span class="keyword">const</span> <span class="keywordtype">bool</span>&amp; <a class="code" href="../../d0/dcb/class_body.html#a3559da5d98aaab2840258a85ded3c506">dynamic</a>) { _dynamic = <a class="code" href="../../d0/dcb/class_body.html#a3559da5d98aaab2840258a85ded3c506">dynamic</a>; }; </div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="../../d0/dcb/class_body.html#a5c7f4723522da2f68b69c68b82c379c5">  149</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; <a class="code" href="../../d0/dcb/class_body.html#a5c7f4723522da2f68b69c68b82c379c5">mass</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _mass; }                  </div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="../../d0/dcb/class_body.html#aa1d4ad933573141833c864ce317b2077">  150</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; <a class="code" href="../../d0/dcb/class_body.html#aa1d4ad933573141833c864ce317b2077">inertia</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _inertia; }            </div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="../../d0/dcb/class_body.html#a545f122ccfa8ad7f720fa06bc5f86f7a">  151</a></span>&#160;    <span class="keyword">const</span> vec3&amp; <a class="code" href="../../d0/dcb/class_body.html#a545f122ccfa8ad7f720fa06bc5f86f7a">force</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _force; }                  </div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="../../d0/dcb/class_body.html#a8b2b2ef099349ff43f226e589f4cf84e">  152</a></span>&#160;    <span class="keyword">const</span> vec3&amp; <a class="code" href="../../d0/dcb/class_body.html#a8b2b2ef099349ff43f226e589f4cf84e">torque</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _torque; }                </div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="../../d0/dcb/class_body.html#a7529f4a8cb0a1f98d0ff636f083052dd">  153</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/dcb/class_body.html#a7529f4a8cb0a1f98d0ff636f083052dd">setId</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; <span class="keywordtype">id</span>) { _id = <a class="code" href="../../d0/dcb/class_body.html#aff085a0a352b82e02c72b252ca5d7f35">id</a>; }                       </div>
+<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="../../d0/dcb/class_body.html#aff085a0a352b82e02c72b252ca5d7f35">  154</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; <a class="code" href="../../d0/dcb/class_body.html#aff085a0a352b82e02c72b252ca5d7f35">id</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _id; }                         </div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="../../d0/dcb/class_body.html#ab311283c238a17a4bad43070238adb8e">  156</a></span>&#160;    <span class="keyword">const</span> vec3 <a class="code" href="../../d0/dcb/class_body.html#ab311283c238a17a4bad43070238adb8e">cog</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _state-&gt;position() + _shape-&gt;cog(); }</div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="../../d0/dcb/class_body.html#ab42f2bf3d2a13104e45dd57004cfcf27">  158</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/dcb/class_body.html#ab42f2bf3d2a13104e45dd57004cfcf27">setColor</a>(<span class="keyword">const</span> vec4&amp; <a class="code" href="../../d0/dcb/class_body.html#a8740d22e2c4f502d686e5b9a97981092">color</a>) { color_ = <a class="code" href="../../d0/dcb/class_body.html#a8740d22e2c4f502d686e5b9a97981092">color</a>; }</div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="../../d0/dcb/class_body.html#a8740d22e2c4f502d686e5b9a97981092">  160</a></span>&#160;    <span class="keyword">const</span> vec4&amp; <a class="code" href="../../d0/dcb/class_body.html#a8740d22e2c4f502d686e5b9a97981092">color</a>(<span class="keyword">const</span> vec4&amp; <a class="code" href="../../d0/dcb/class_body.html#a8740d22e2c4f502d686e5b9a97981092">color</a>)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> color_; }</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="../../d0/dcb/class_body.html#ae729f28988aed71d398846d2cba37277">  163</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/dcb/class_body.html#ae729f28988aed71d398846d2cba37277">draw</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keyword">const</span> vec3&amp; pos = _state-&gt;position();</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        vec3 angle = _state-&gt;angPos() / PI * 180;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        glPushMatrix();</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        glTranslated(pos[0], pos[1], pos[2]);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        glRotated(angle(0), 1, 0, 0);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        glRotated(angle(1), 0, 1, 0);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        glRotated(angle(2), 0, 0, 1);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        glColor4dv(color_.data());</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        _shape-&gt;draw();</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        glPopMatrix();</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;};</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="comment">//} // namespace Data</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="comment">//}; // namespace core</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="comment">//}; // namespace DEM</span></div>
+<div class="ttc" id="aclass_body_html"><div class="ttname"><a href="../../d0/dcb/class_body.html">Body</a></div><div class="ttdoc">Body is the class of objects, including particles and walls, in the simulation A Body instance have 4...</div><div class="ttdef"><b>Definition:</b> Body.h:27</div></div>
+<div class="ttc" id="aclass_body_html_a08f23952578e7d94c56c5264d05ea3bf"><div class="ttname"><a href="../../d0/dcb/class_body.html#a08f23952578e7d94c56c5264d05ea3bf">Body::state</a></div><div class="ttdeci">std::shared_ptr&lt; State &gt; &amp; state()</div><div class="ttdoc">Get state</div><div class="ttdef"><b>Definition:</b> Body.h:142</div></div>
+<div class="ttc" id="aclass_body_html_a08fce935c1d737ca04cde1b89fec4f24"><div class="ttname"><a href="../../d0/dcb/class_body.html#a08fce935c1d737ca04cde1b89fec4f24">Body::applyGravity</a></div><div class="ttdeci">void applyGravity(const vec3 &amp;g=vec3(0, -9.81, 0))</div><div class="ttdoc">Apply acc of gravity to the body</div><div class="ttdef"><b>Definition:</b> Body.h:91</div></div>
+<div class="ttc" id="aclass_body_html_a11b4dff04e9d6e783df2d06a4d51cf3a"><div class="ttname"><a href="../../d0/dcb/class_body.html#a11b4dff04e9d6e783df2d06a4d51cf3a">Body::shape</a></div><div class="ttdeci">std::shared_ptr&lt; Shape &gt; &amp; shape()</div><div class="ttdoc">Get shape</div><div class="ttdef"><b>Definition:</b> Body.h:144</div></div>
+<div class="ttc" id="aclass_body_html_a183b88f522212e4b53af3d2bd9ebf8c1"><div class="ttname"><a href="../../d0/dcb/class_body.html#a183b88f522212e4b53af3d2bd9ebf8c1">Body::bound</a></div><div class="ttdeci">std::shared_ptr&lt; Bound &gt; &amp; bound()</div><div class="ttdoc">Get bound</div><div class="ttdef"><b>Definition:</b> Body.h:143</div></div>
+<div class="ttc" id="aclass_body_html_a2419c43dc4bd5d674d55d84eab2c4862"><div class="ttname"><a href="../../d0/dcb/class_body.html#a2419c43dc4bd5d674d55d84eab2c4862">Body::Body</a></div><div class="ttdeci">Body(const std::shared_ptr&lt; Shape &gt; &amp;shp, const std::shared_ptr&lt; Material &gt; &amp;mat, const std::shared_ptr&lt; State &gt; &amp;stat, const std::shared_ptr&lt; Bound &gt; &amp;bnd)</div><div class="ttdoc">Constructor of the Body</div><div class="ttdef"><b>Definition:</b> Body.h:54</div></div>
+<div class="ttc" id="aclass_body_html_a333d508486922fd146d30abe13512555"><div class="ttname"><a href="../../d0/dcb/class_body.html#a333d508486922fd146d30abe13512555">Body::preInteraction</a></div><div class="ttdeci">std::shared_ptr&lt; Interaction &gt; preInteraction(Interaction &amp;interaction)</div><div class="ttdoc">Find if the input Interaction exists on previous move. A interaction is said exists if ids of the two...</div><div class="ttdef"><b>Definition:</b> Body.h:104</div></div>
+<div class="ttc" id="aclass_body_html_a3559da5d98aaab2840258a85ded3c506"><div class="ttname"><a href="../../d0/dcb/class_body.html#a3559da5d98aaab2840258a85ded3c506">Body::dynamic</a></div><div class="ttdeci">const bool &amp; dynamic() const</div><div class="ttdoc">Get dynamic state (movable or not)</div><div class="ttdef"><b>Definition:</b> Body.h:147</div></div>
+<div class="ttc" id="aclass_body_html_a42b3cbf061823b48887228a6f4420f7a"><div class="ttname"><a href="../../d0/dcb/class_body.html#a42b3cbf061823b48887228a6f4420f7a">Body::updateBound</a></div><div class="ttdeci">void updateBound()</div><div class="ttdoc">Update the bound, gennerally be invoked for each simulation move</div><div class="ttdef"><b>Definition:</b> Body.h:65</div></div>
+<div class="ttc" id="aclass_body_html_a4388c8b65a190782116a0beb74a70075"><div class="ttname"><a href="../../d0/dcb/class_body.html#a4388c8b65a190782116a0beb74a70075">Body::storePreInteraction</a></div><div class="ttdeci">void storePreInteraction()</div><div class="ttdoc">Invoke to save the interaction on this move before next one</div><div class="ttdef"><b>Definition:</b> Body.h:119</div></div>
+<div class="ttc" id="aclass_body_html_a545f122ccfa8ad7f720fa06bc5f86f7a"><div class="ttname"><a href="../../d0/dcb/class_body.html#a545f122ccfa8ad7f720fa06bc5f86f7a">Body::force</a></div><div class="ttdeci">const vec3 &amp; force() const</div><div class="ttdoc">Get force</div><div class="ttdef"><b>Definition:</b> Body.h:151</div></div>
+<div class="ttc" id="aclass_body_html_a5c7f4723522da2f68b69c68b82c379c5"><div class="ttname"><a href="../../d0/dcb/class_body.html#a5c7f4723522da2f68b69c68b82c379c5">Body::mass</a></div><div class="ttdeci">const double &amp; mass() const</div><div class="ttdoc">Set dynamic state</div><div class="ttdef"><b>Definition:</b> Body.h:149</div></div>
+<div class="ttc" id="aclass_body_html_a641df089586d3fcd6c1a6bc667431b21"><div class="ttname"><a href="../../d0/dcb/class_body.html#a641df089586d3fcd6c1a6bc667431b21">Body::addTorque</a></div><div class="ttdeci">void addTorque(const vec3 &amp;t)</div><div class="ttdoc">Add torque to the body</div><div class="ttdef"><b>Definition:</b> Body.h:98</div></div>
+<div class="ttc" id="aclass_body_html_a7529f4a8cb0a1f98d0ff636f083052dd"><div class="ttname"><a href="../../d0/dcb/class_body.html#a7529f4a8cb0a1f98d0ff636f083052dd">Body::setId</a></div><div class="ttdeci">void setId(const int &amp;id)</div><div class="ttdoc">Set id</div><div class="ttdef"><b>Definition:</b> Body.h:153</div></div>
+<div class="ttc" id="aclass_body_html_a8740d22e2c4f502d686e5b9a97981092"><div class="ttname"><a href="../../d0/dcb/class_body.html#a8740d22e2c4f502d686e5b9a97981092">Body::color</a></div><div class="ttdeci">const vec4 &amp; color(const vec4 &amp;color) const</div><div class="ttdoc">Get display color</div><div class="ttdef"><b>Definition:</b> Body.h:160</div></div>
+<div class="ttc" id="aclass_body_html_a8b2b2ef099349ff43f226e589f4cf84e"><div class="ttname"><a href="../../d0/dcb/class_body.html#a8b2b2ef099349ff43f226e589f4cf84e">Body::torque</a></div><div class="ttdeci">const vec3 &amp; torque() const</div><div class="ttdoc">Get torque</div><div class="ttdef"><b>Definition:</b> Body.h:152</div></div>
+<div class="ttc" id="aclass_body_html_a9681bbcf0ae374da5d02764895dc647a"><div class="ttname"><a href="../../d0/dcb/class_body.html#a9681bbcf0ae374da5d02764895dc647a">Body::addInteraction</a></div><div class="ttdeci">void addInteraction(const Interaction &amp;interaction)</div><div class="ttdoc">Add a new interaction to the body</div><div class="ttdef"><b>Definition:</b> Body.h:114</div></div>
+<div class="ttc" id="aclass_body_html_a9f5da2b98c2ee5868273a6478f7a209c"><div class="ttname"><a href="../../d0/dcb/class_body.html#a9f5da2b98c2ee5868273a6478f7a209c">Body::material</a></div><div class="ttdeci">std::shared_ptr&lt; Material &gt; &amp; material()</div><div class="ttdef"><b>Definition:</b> Body.h:145</div></div>
+<div class="ttc" id="aclass_body_html_aa1d4ad933573141833c864ce317b2077"><div class="ttname"><a href="../../d0/dcb/class_body.html#aa1d4ad933573141833c864ce317b2077">Body::inertia</a></div><div class="ttdeci">const double &amp; inertia() const</div><div class="ttdoc">Get inertia</div><div class="ttdef"><b>Definition:</b> Body.h:150</div></div>
+<div class="ttc" id="aclass_body_html_ab0ce6d3d421c05b497f42797f734f2a6"><div class="ttname"><a href="../../d0/dcb/class_body.html#ab0ce6d3d421c05b497f42797f734f2a6">Body::addForce</a></div><div class="ttdeci">void addForce(const vec3 &amp;f)</div><div class="ttdoc">Add force to the body</div><div class="ttdef"><b>Definition:</b> Body.h:95</div></div>
+<div class="ttc" id="aclass_body_html_ab311283c238a17a4bad43070238adb8e"><div class="ttname"><a href="../../d0/dcb/class_body.html#ab311283c238a17a4bad43070238adb8e">Body::cog</a></div><div class="ttdeci">const vec3 cog() const</div><div class="ttdoc">Get cog, Center Of Gravity</div><div class="ttdef"><b>Definition:</b> Body.h:156</div></div>
+<div class="ttc" id="aclass_body_html_ab42f2bf3d2a13104e45dd57004cfcf27"><div class="ttname"><a href="../../d0/dcb/class_body.html#ab42f2bf3d2a13104e45dd57004cfcf27">Body::setColor</a></div><div class="ttdeci">void setColor(const vec4 &amp;color)</div><div class="ttdoc">Set display color</div><div class="ttdef"><b>Definition:</b> Body.h:158</div></div>
+<div class="ttc" id="aclass_body_html_aca700d59a6d111ef906968cd457b5647"><div class="ttname"><a href="../../d0/dcb/class_body.html#aca700d59a6d111ef906968cd457b5647">Body::resetForce</a></div><div class="ttdeci">void resetForce()</div><div class="ttdoc">Reset the forces including torque</div><div class="ttdef"><b>Definition:</b> Body.h:84</div></div>
+<div class="ttc" id="aclass_body_html_ada0eebc09fda646aeb28e0d9dffb77af"><div class="ttname"><a href="../../d0/dcb/class_body.html#ada0eebc09fda646aeb28e0d9dffb77af">Body::applyLocalDamping</a></div><div class="ttdeci">void applyLocalDamping(const double &amp;damping, const double &amp;dt)</div><div class="ttdoc">Apply local damping to the body according to the body state</div><div class="ttdef"><b>Definition:</b> Body.h:127</div></div>
+<div class="ttc" id="aclass_body_html_ae729f28988aed71d398846d2cba37277"><div class="ttname"><a href="../../d0/dcb/class_body.html#ae729f28988aed71d398846d2cba37277">Body::draw</a></div><div class="ttdeci">void draw() const</div><div class="ttdoc">Draw the object uing OpenGL</div><div class="ttdef"><b>Definition:</b> Body.h:163</div></div>
+<div class="ttc" id="aclass_body_html_aee413511953b36456d4bf7babd213e38"><div class="ttname"><a href="../../d0/dcb/class_body.html#aee413511953b36456d4bf7babd213e38">Body::energy</a></div><div class="ttdeci">double energy(const double &amp;level=0, const double &amp;g=-9.81) const</div><div class="ttdoc">Compute and return the Body energy</div><div class="ttdef"><b>Definition:</b> Body.h:77</div></div>
+<div class="ttc" id="aclass_body_html_aff085a0a352b82e02c72b252ca5d7f35"><div class="ttname"><a href="../../d0/dcb/class_body.html#aff085a0a352b82e02c72b252ca5d7f35">Body::id</a></div><div class="ttdeci">const int &amp; id() const</div><div class="ttdef"><b>Definition:</b> Body.h:154</div></div>
+<div class="ttc" id="aclass_interaction_html"><div class="ttname"><a href="../../d3/d8e/class_interaction.html">Interaction</a></div><div class="ttdef"><b>Definition:</b> Interaction.h:10</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_d2bdd8205b81aa505d96e4fc22c7ef04.html">SimpleDEM</a></li><li class="navelem"><a class="el" href="../../dir_0a0c75e27d72a3a6558198456060c458.html">include</a></li><li class="navelem"><a class="el" href="../../dir_8725efa00d60333bafbb1280c24a679f.html">core</a></li><li class="navelem"><a class="el" href="../../dir_663495d1676900703de045f056eb46c1.html">Datas</a></li><li class="navelem"><b>Body.h</b></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

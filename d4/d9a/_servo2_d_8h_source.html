@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SimpleDEM: Servo2D.h 源文件</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../temp_logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SimpleDEM
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Discrete Element Methods Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d4/d9a/_servo2_d_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Servo2D.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;../core/SceneBase.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// pkg data compoment</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;pkg/Datas/AabbBnd.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;pkg/Datas/CircleShp.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;pkg/Datas/FrictMat.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;pkg/Datas/LineShp.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;pkg/Datas/NormalState.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// pkg functors</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;pkg/Functions/b2_Aabb_Aabb.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;pkg/Functions/ig2_Circle_Circle_GcGeom.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;pkg/Functions/ig2_Circle_Line_GcGeom.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;pkg/Functions/ip2_Frict_Frict_FrictIPhys.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;pkg/Functions/law2_FrictFrict_GcGeom_Std.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// engines</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;pkg/Functions/CriticalTimestep.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;pkg/Functions/GravityEngine.h&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;pkg/Functions/LocalDampingEngine.h&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;pkg/Functions/ServoEngine.h&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// std</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../d6/da5/class_servo2_d.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d6/da5/class_servo2_d.html">Servo2D</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">/* Parameters */</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../d6/da5/class_servo2_d.html#ae8a47380bac43eb52e51ddd351bea038">   26</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../d6/da5/class_servo2_d.html#ae8a47380bac43eb52e51ddd351bea038">radius</a> = 0.05;   </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d6/da5/class_servo2_d.html#a6fcb99f3c27970da817264bafe4f2b66">   27</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../d6/da5/class_servo2_d.html#a6fcb99f3c27970da817264bafe4f2b66">radiusRnd</a> = 0.2; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../d6/da5/class_servo2_d.html#ae6d4bd7d55d1bc050fd13e75dd41517b">   29</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../d6/da5/class_servo2_d.html#ae6d4bd7d55d1bc050fd13e75dd41517b">density</a> = 2.3e3; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d6/da5/class_servo2_d.html#a4c1479516e73ba1e159fcf4d7ebc7627">   30</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../d6/da5/class_servo2_d.html#a4c1479516e73ba1e159fcf4d7ebc7627">stiffness</a> = 1e7; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d6/da5/class_servo2_d.html#a100d555c5e30202d5be498346279c5e4">   31</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../d6/da5/class_servo2_d.html#a100d555c5e30202d5be498346279c5e4">damping</a> = 0.5;   </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../d6/da5/class_servo2_d.html#ab0c2f53308c85ddcdc6a99ee3d076248">   32</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../d6/da5/class_servo2_d.html#ab0c2f53308c85ddcdc6a99ee3d076248">friction</a> = 0.3;  </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../d6/da5/class_servo2_d.html#aa94c09fe47a5a208bb2974eb922cdc2e">   34</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../d6/da5/class_servo2_d.html#aa94c09fe47a5a208bb2974eb922cdc2e">wallStiffness</a> = 1e7; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../d6/da5/class_servo2_d.html#a38419a27718f996c377bc45fc6c0bc71">   35</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../d6/da5/class_servo2_d.html#a38419a27718f996c377bc45fc6c0bc71">wallDamping</a> = 0.3;   </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d6/da5/class_servo2_d.html#ae8f7415cca4c4e0563e2fc2d003fada1">   36</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../d6/da5/class_servo2_d.html#ae8f7415cca4c4e0563e2fc2d003fada1">wallFriction</a> = 0.0;  </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../d6/da5/class_servo2_d.html#a52523f87ada96f80954689645600dea8">   38</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d6/da5/class_servo2_d.html#a52523f87ada96f80954689645600dea8">useGravity</a> = <span class="keyword">true</span>;       </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../d6/da5/class_servo2_d.html#a83a6dd7cdc4bd3d9ac4f36ef1287b764">   39</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d6/da5/class_servo2_d.html#a83a6dd7cdc4bd3d9ac4f36ef1287b764">useLocalDamping</a> = <span class="keyword">false</span>; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d6/da5/class_servo2_d.html#ac5b33e4ae471c9adece9ade91a8727ca">   40</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../d6/da5/class_servo2_d.html#ac5b33e4ae471c9adece9ade91a8727ca">localDamping</a> = 0.1;    </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d6/da5/class_servo2_d.html#a9a68f7880a0be11aa0713affdb6c519d">   42</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../d6/da5/class_servo2_d.html#a9a68f7880a0be11aa0713affdb6c519d">dtRatio</a> = 1.0; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../d6/da5/class_servo2_d.html#aafc912ad18227f6329717de66eb93075">   44</a></span>&#160;    <span class="keywordtype">double</span> xLeft = -1.0, <a class="code" href="../../d6/da5/class_servo2_d.html#aafc912ad18227f6329717de66eb93075">xRight</a> = 1.0; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="../../d6/da5/class_servo2_d.html#a9970f6c8a0f9a87388c21863f6d46723">   45</a></span>&#160;    <span class="keywordtype">double</span> yBottom = -1, <a class="code" href="../../d6/da5/class_servo2_d.html#a9970f6c8a0f9a87388c21863f6d46723">yUp</a> = 1;      </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d6/da5/class_servo2_d.html#a8dd06d269e5af10d883c2b4a563181a4">   46</a></span>&#160;    <span class="keywordtype">int</span> xNum = 10, <a class="code" href="../../d6/da5/class_servo2_d.html#a8dd06d269e5af10d883c2b4a563181a4">yNum</a> = 10;          </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">/* Servo paramters */</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">double</span> et3_wsxx_req = 2.0e5;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">double</span> et3_wsyy_req = 2.0e5;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">int</span> et3_servo_xon = 1;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">int</span> et3_servo_yon = 1;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">double</span> tol = 5e-3;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">double</span> _et3_gain_cnt = 0;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">double</span> et3_servo_gain_cyc = 50;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">double</span> et3_servo_alpha = 0.5;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">double</span> et3_servo_vmax = 0.1;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    std::shared_ptr&lt;SceneBase&gt; make_scene() {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        std::shared_ptr&lt;SceneBase&gt; scene = std::make_shared&lt;SceneBase&gt;(<a class="code" href="../../dd/d9d/class_scene_base.html">SceneBase</a>());</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="comment">/* Materials */</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        std::shared_ptr&lt;Material&gt; particleMat = std::make_shared&lt;FrictMat&gt;(</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="../../dc/da2/class_frict_mat.html">FrictMat</a>(<a class="code" href="../../d6/da5/class_servo2_d.html#a4c1479516e73ba1e159fcf4d7ebc7627">stiffness</a>, <a class="code" href="../../d6/da5/class_servo2_d.html#a4c1479516e73ba1e159fcf4d7ebc7627">stiffness</a>, <a class="code" href="../../d6/da5/class_servo2_d.html#ab0c2f53308c85ddcdc6a99ee3d076248">friction</a>, <a class="code" href="../../d6/da5/class_servo2_d.html#ae6d4bd7d55d1bc050fd13e75dd41517b">density</a>, <a class="code" href="../../d6/da5/class_servo2_d.html#a100d555c5e30202d5be498346279c5e4">damping</a>, <a class="code" href="../../d6/da5/class_servo2_d.html#a100d555c5e30202d5be498346279c5e4">damping</a>));</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        std::shared_ptr&lt;Material&gt; wallMat = std::make_shared&lt;FrictMat&gt;(<a class="code" href="../../dc/da2/class_frict_mat.html">FrictMat</a>(</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <a class="code" href="../../d6/da5/class_servo2_d.html#aa94c09fe47a5a208bb2974eb922cdc2e">wallStiffness</a>, <a class="code" href="../../d6/da5/class_servo2_d.html#aa94c09fe47a5a208bb2974eb922cdc2e">wallStiffness</a>, <a class="code" href="../../d6/da5/class_servo2_d.html#ae8f7415cca4c4e0563e2fc2d003fada1">wallFriction</a>, <a class="code" href="../../d6/da5/class_servo2_d.html#ae6d4bd7d55d1bc050fd13e75dd41517b">density</a>, <a class="code" href="../../d6/da5/class_servo2_d.html#a38419a27718f996c377bc45fc6c0bc71">wallDamping</a>, <a class="code" href="../../d6/da5/class_servo2_d.html#a38419a27718f996c377bc45fc6c0bc71">wallDamping</a>));</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        scene-&gt;addMaterial(particleMat);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        scene-&gt;addMaterial(wallMat);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">/* Bodies */</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">double</span> xItv = 0, yItv = 0;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">if</span> (xNum &gt; 1)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            xItv = (<a class="code" href="../../d6/da5/class_servo2_d.html#aafc912ad18227f6329717de66eb93075">xRight</a> - xLeft - 4 * <a class="code" href="../../d6/da5/class_servo2_d.html#ae8a47380bac43eb52e51ddd351bea038">radius</a>) / (xNum - 1);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d6/da5/class_servo2_d.html#a8dd06d269e5af10d883c2b4a563181a4">yNum</a> &gt; 1)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            yItv = (<a class="code" href="../../d6/da5/class_servo2_d.html#a9970f6c8a0f9a87388c21863f6d46723">yUp</a> - yBottom - 4 * <a class="code" href="../../d6/da5/class_servo2_d.html#ae8a47380bac43eb52e51ddd351bea038">radius</a>) / (<a class="code" href="../../d6/da5/class_servo2_d.html#a8dd06d269e5af10d883c2b4a563181a4">yNum</a> - 1);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; xNum; i++) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordtype">double</span> x = (xLeft + <a class="code" href="../../d6/da5/class_servo2_d.html#aafc912ad18227f6329717de66eb93075">xRight</a>) / 2.0 + (i + 0.5 - 0.5 * xNum) * xItv;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="../../d6/da5/class_servo2_d.html#a8dd06d269e5af10d883c2b4a563181a4">yNum</a>; j++) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                <span class="keywordtype">double</span> x1 = x + (<a class="code" href="../../d6/da5/class_servo2_d.html#ae8a47380bac43eb52e51ddd351bea038">radius</a> * randDouble(0, 0.5));</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                <span class="keywordtype">double</span> y = (yBottom + <a class="code" href="../../d6/da5/class_servo2_d.html#a9970f6c8a0f9a87388c21863f6d46723">yUp</a>) / 2.0 + (j + 0.5 - 0.5 * <a class="code" href="../../d6/da5/class_servo2_d.html#a8dd06d269e5af10d883c2b4a563181a4">yNum</a>) * yItv;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <span class="keywordtype">double</span> rd = <a class="code" href="../../d6/da5/class_servo2_d.html#ae8a47380bac43eb52e51ddd351bea038">radius</a> * randDouble(1 - <a class="code" href="../../d6/da5/class_servo2_d.html#a6fcb99f3c27970da817264bafe4f2b66">radiusRnd</a>, 1 + <a class="code" href="../../d6/da5/class_servo2_d.html#a6fcb99f3c27970da817264bafe4f2b66">radiusRnd</a>);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                scene-&gt;addBody(std::make_shared&lt;CircleShp&gt;(<a class="code" href="../../da/d7d/class_circle_shp.html">CircleShp</a>(rd)), particleMat,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                               std::make_shared&lt;NormalState&gt;(<a class="code" href="../../d9/dad/class_normal_state.html">NormalState</a>(vec3(x1, y, 0))),</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                               std::make_shared&lt;AabbBnd&gt;(<a class="code" href="../../d0/d6f/class_aabb_bnd.html">AabbBnd</a>()));</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        scene-&gt;addWalls(std::make_shared&lt;LineShp&gt;(<a class="code" href="../../da/d48/class_line_shp.html">LineShp</a>(vec3(1, 0, 0), 2)), wallMat,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                        std::make_shared&lt;NormalState&gt;(<a class="code" href="../../d9/dad/class_normal_state.html">NormalState</a>(vec3(0, 1, 0))),</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                        std::make_shared&lt;AabbBnd&gt;(<a class="code" href="../../d0/d6f/class_aabb_bnd.html">AabbBnd</a>())); <span class="comment">// up</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        scene-&gt;addWalls(std::make_shared&lt;LineShp&gt;(<a class="code" href="../../da/d48/class_line_shp.html">LineShp</a>(vec3(1, 0, 0), 2)), wallMat,</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                        std::make_shared&lt;NormalState&gt;(<a class="code" href="../../d9/dad/class_normal_state.html">NormalState</a>(vec3(0, -1, 0))),</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                        std::make_shared&lt;AabbBnd&gt;(<a class="code" href="../../d0/d6f/class_aabb_bnd.html">AabbBnd</a>())); <span class="comment">// bottom</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        scene-&gt;addWalls(</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            std::make_shared&lt;LineShp&gt;(<a class="code" href="../../da/d48/class_line_shp.html">LineShp</a>(vec3(0, 1, 0), 2)), wallMat,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            std::make_shared&lt;NormalState&gt;(<a class="code" href="../../d9/dad/class_normal_state.html">NormalState</a>(vec3(xLeft, (yBottom + <a class="code" href="../../d6/da5/class_servo2_d.html#a9970f6c8a0f9a87388c21863f6d46723">yUp</a>) / 2, 0))),</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            std::make_shared&lt;AabbBnd&gt;(<a class="code" href="../../d0/d6f/class_aabb_bnd.html">AabbBnd</a>())); <span class="comment">// left</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        scene-&gt;addWalls(</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            std::make_shared&lt;LineShp&gt;(<a class="code" href="../../da/d48/class_line_shp.html">LineShp</a>(vec3(0, 1, 0), 2)), wallMat,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            std::make_shared&lt;NormalState&gt;(<a class="code" href="../../d9/dad/class_normal_state.html">NormalState</a>(vec3(<a class="code" href="../../d6/da5/class_servo2_d.html#aafc912ad18227f6329717de66eb93075">xRight</a>, (yBottom + <a class="code" href="../../d6/da5/class_servo2_d.html#a9970f6c8a0f9a87388c21863f6d46723">yUp</a>) / 2, 0))),</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            std::make_shared&lt;AabbBnd&gt;(<a class="code" href="../../d0/d6f/class_aabb_bnd.html">AabbBnd</a>())); <span class="comment">// right</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="comment">/* Functors */</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        scene-&gt;addFunctor&lt;<a class="code" href="../../da/d7d/class_circle_shp.html">CircleShp</a>, <a class="code" href="../../da/d48/class_line_shp.html">LineShp</a>&gt;(</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            std::make_shared&lt;ig2_Circle_Line_GcGeom&gt;(<a class="code" href="../../d9/dde/classig2___circle___line___gc_geom.html">ig2_Circle_Line_GcGeom</a>()));</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        scene-&gt;addFunctor&lt;<a class="code" href="../../da/d7d/class_circle_shp.html">CircleShp</a>, <a class="code" href="../../da/d7d/class_circle_shp.html">CircleShp</a>&gt;(</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            std::make_shared&lt;ig2_Circle_Circle_GcGeom&gt;(<a class="code" href="../../d3/ded/classig2___circle___circle___gc_geom.html">ig2_Circle_Circle_GcGeom</a>()));</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        scene-&gt;addIPhysFunctor&lt;<a class="code" href="../../dc/da2/class_frict_mat.html">FrictMat</a>, <a class="code" href="../../dc/da2/class_frict_mat.html">FrictMat</a>&gt;(</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            std::make_shared&lt;ip2_Frict_Frict_FrictIPhys&gt;(<a class="code" href="../../dc/d78/classip2___frict___frict___frict_i_phys.html">ip2_Frict_Frict_FrictIPhys</a>()));</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        scene-&gt;addLawFunctor&lt;<a class="code" href="../../d4/dce/class_frict_phys.html">FrictPhys</a>, <a class="code" href="../../d5/dab/class_general_circle_geom.html">GeneralCircleGeom</a>&gt;(</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            std::make_shared&lt;law2_FrictFrict_GcGeom_Std&gt;(<a class="code" href="../../d6/d98/classlaw2___frict_frict___gc_geom___std.html">law2_FrictFrict_GcGeom_Std</a>()));</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        scene-&gt;addBIntersectFunctor&lt;<a class="code" href="../../d0/d6f/class_aabb_bnd.html">AabbBnd</a>, <a class="code" href="../../d0/d6f/class_aabb_bnd.html">AabbBnd</a>&gt;(</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            std::make_shared&lt;bi2_Aabb_Aabb&gt;(<a class="code" href="../../d5/d99/classbi2___aabb___aabb.html">bi2_Aabb_Aabb</a>()));</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="comment">/* Engines */</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d6/da5/class_servo2_d.html#a52523f87ada96f80954689645600dea8">useGravity</a>) {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            std::shared_ptr&lt;Engine&gt; gravityEngine =</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                std::make_shared&lt;GravityEngine&gt;(<a class="code" href="../../d1/dcb/class_gravity_engine.html">GravityEngine</a>(scene));</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            scene-&gt;_gravityEngine = gravityEngine;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        std::shared_ptr&lt;Engine&gt; dtCalculator =</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            std::make_shared&lt;CriticalTimestep&gt;(<a class="code" href="../../d8/d82/class_critical_timestep.html">CriticalTimestep</a>(scene, 0.1 * <a class="code" href="../../d6/da5/class_servo2_d.html#a9a68f7880a0be11aa0713affdb6c519d">dtRatio</a>));</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d6/da5/class_servo2_d.html#a83a6dd7cdc4bd3d9ac4f36ef1287b764">useLocalDamping</a>) {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            std::shared_ptr&lt;Engine&gt; localDamp =</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                std::make_shared&lt;LocalDampingEngine&gt;(<a class="code" href="../../d0/d7e/class_local_damping_engine.html">LocalDampingEngine</a>(scene, <a class="code" href="../../d6/da5/class_servo2_d.html#ac5b33e4ae471c9adece9ade91a8727ca">localDamping</a>));</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            scene-&gt;_localDamping = localDamp;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        scene-&gt;_dtCalculator = dtCalculator;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        std::shared_ptr&lt;ServoEngine&gt; servoEngine =</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            std::make_shared&lt;ServoEngine&gt;(<a class="code" href="../../d3/d74/class_servo_engine.html">ServoEngine</a>(scene));</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        servoEngine-&gt;et3_wsxx_req = et3_wsxx_req;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        servoEngine-&gt;et3_wsyy_req = et3_wsyy_req;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        servoEngine-&gt;et3_servo_xon = et3_servo_xon;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        servoEngine-&gt;et3_servo_yon = et3_servo_yon;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        servoEngine-&gt;tol = tol;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        servoEngine-&gt;_et3_gain_cnt = _et3_gain_cnt;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        servoEngine-&gt;et3_servo_gain_cyc = et3_servo_gain_cyc;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        servoEngine-&gt;et3_servo_alpha = et3_servo_alpha;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        servoEngine-&gt;et3_servo_vmax = et3_servo_vmax;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        scene-&gt;_servoEngine = servoEngine;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordflow">return</span> scene;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;};</div>
+<div class="ttc" id="aclass_aabb_bnd_html"><div class="ttname"><a href="../../d0/d6f/class_aabb_bnd.html">AabbBnd</a></div><div class="ttdoc">AabbBnd类, 表示AABB Bound, 用于进行pass 1的碰撞检测</div><div class="ttdef"><b>Definition:</b> AabbBnd.h:5</div></div>
+<div class="ttc" id="aclass_circle_shp_html"><div class="ttname"><a href="../../da/d7d/class_circle_shp.html">CircleShp</a></div><div class="ttdoc">CircleShp类, 表示一个二维圆形Shape</div><div class="ttdef"><b>Definition:</b> CircleShp.h:6</div></div>
+<div class="ttc" id="aclass_critical_timestep_html"><div class="ttname"><a href="../../d8/d82/class_critical_timestep.html">CriticalTimestep</a></div><div class="ttdoc">CriticalTimestep Class for determination of the Critical Time Step of the simulation....</div><div class="ttdef"><b>Definition:</b> CriticalTimestep.h:8</div></div>
+<div class="ttc" id="aclass_frict_mat_html"><div class="ttname"><a href="../../dc/da2/class_frict_mat.html">FrictMat</a></div><div class="ttdoc">FrictMat类, 有密度/刚度/摩擦系数等属性</div><div class="ttdef"><b>Definition:</b> FrictMat.h:5</div></div>
+<div class="ttc" id="aclass_frict_phys_html"><div class="ttname"><a href="../../d4/dce/class_frict_phys.html">FrictPhys</a></div><div class="ttdef"><b>Definition:</b> FrictPhys.h:4</div></div>
+<div class="ttc" id="aclass_general_circle_geom_html"><div class="ttname"><a href="../../d5/dab/class_general_circle_geom.html">GeneralCircleGeom</a></div><div class="ttdoc">A general interaction geometry class for circle-circle type of interactions</div><div class="ttdef"><b>Definition:</b> GeneralCircleGeom.h:7</div></div>
+<div class="ttc" id="aclass_gravity_engine_html"><div class="ttname"><a href="../../d1/dcb/class_gravity_engine.html">GravityEngine</a></div><div class="ttdef"><b>Definition:</b> GravityEngine.h:6</div></div>
+<div class="ttc" id="aclass_line_shp_html"><div class="ttname"><a href="../../da/d48/class_line_shp.html">LineShp</a></div><div class="ttdef"><b>Definition:</b> LineShp.h:9</div></div>
+<div class="ttc" id="aclass_local_damping_engine_html"><div class="ttname"><a href="../../d0/d7e/class_local_damping_engine.html">LocalDampingEngine</a></div><div class="ttdef"><b>Definition:</b> LocalDampingEngine.h:5</div></div>
+<div class="ttc" id="aclass_normal_state_html"><div class="ttname"><a href="../../d9/dad/class_normal_state.html">NormalState</a></div><div class="ttdef"><b>Definition:</b> NormalState.h:7</div></div>
+<div class="ttc" id="aclass_scene_base_html"><div class="ttname"><a href="../../dd/d9d/class_scene_base.html">SceneBase</a></div><div class="ttdoc">Scene类, 是模拟的最大容器, 包含所有的颗粒, 函数等</div><div class="ttdef"><b>Definition:</b> SceneBase.h:23</div></div>
+<div class="ttc" id="aclass_servo2_d_html"><div class="ttname"><a href="../../d6/da5/class_servo2_d.html">Servo2D</a></div><div class="ttdef"><b>Definition:</b> Servo2D.h:23</div></div>
+<div class="ttc" id="aclass_servo2_d_html_a100d555c5e30202d5be498346279c5e4"><div class="ttname"><a href="../../d6/da5/class_servo2_d.html#a100d555c5e30202d5be498346279c5e4">Servo2D::damping</a></div><div class="ttdeci">double damping</div><div class="ttdoc">damping coeff of the circle</div><div class="ttdef"><b>Definition:</b> Servo2D.h:31</div></div>
+<div class="ttc" id="aclass_servo2_d_html_a38419a27718f996c377bc45fc6c0bc71"><div class="ttname"><a href="../../d6/da5/class_servo2_d.html#a38419a27718f996c377bc45fc6c0bc71">Servo2D::wallDamping</a></div><div class="ttdeci">double wallDamping</div><div class="ttdoc">damping coeff of the wall</div><div class="ttdef"><b>Definition:</b> Servo2D.h:35</div></div>
+<div class="ttc" id="aclass_servo2_d_html_a4c1479516e73ba1e159fcf4d7ebc7627"><div class="ttname"><a href="../../d6/da5/class_servo2_d.html#a4c1479516e73ba1e159fcf4d7ebc7627">Servo2D::stiffness</a></div><div class="ttdeci">double stiffness</div><div class="ttdoc">stiffness of the circle</div><div class="ttdef"><b>Definition:</b> Servo2D.h:30</div></div>
+<div class="ttc" id="aclass_servo2_d_html_a52523f87ada96f80954689645600dea8"><div class="ttname"><a href="../../d6/da5/class_servo2_d.html#a52523f87ada96f80954689645600dea8">Servo2D::useGravity</a></div><div class="ttdeci">bool useGravity</div><div class="ttdoc">whether to use gravity</div><div class="ttdef"><b>Definition:</b> Servo2D.h:38</div></div>
+<div class="ttc" id="aclass_servo2_d_html_a6fcb99f3c27970da817264bafe4f2b66"><div class="ttname"><a href="../../d6/da5/class_servo2_d.html#a6fcb99f3c27970da817264bafe4f2b66">Servo2D::radiusRnd</a></div><div class="ttdeci">double radiusRnd</div><div class="ttdef"><b>Definition:</b> Servo2D.h:27</div></div>
+<div class="ttc" id="aclass_servo2_d_html_a83a6dd7cdc4bd3d9ac4f36ef1287b764"><div class="ttname"><a href="../../d6/da5/class_servo2_d.html#a83a6dd7cdc4bd3d9ac4f36ef1287b764">Servo2D::useLocalDamping</a></div><div class="ttdeci">bool useLocalDamping</div><div class="ttdoc">whether to use local damping</div><div class="ttdef"><b>Definition:</b> Servo2D.h:39</div></div>
+<div class="ttc" id="aclass_servo2_d_html_a8dd06d269e5af10d883c2b4a563181a4"><div class="ttname"><a href="../../d6/da5/class_servo2_d.html#a8dd06d269e5af10d883c2b4a563181a4">Servo2D::yNum</a></div><div class="ttdeci">int yNum</div><div class="ttdoc">number of bodies in x &amp; y directions</div><div class="ttdef"><b>Definition:</b> Servo2D.h:46</div></div>
+<div class="ttc" id="aclass_servo2_d_html_a9970f6c8a0f9a87388c21863f6d46723"><div class="ttname"><a href="../../d6/da5/class_servo2_d.html#a9970f6c8a0f9a87388c21863f6d46723">Servo2D::yUp</a></div><div class="ttdeci">double yUp</div><div class="ttdoc">initial y range, initial position of bottom &amp; up walls</div><div class="ttdef"><b>Definition:</b> Servo2D.h:45</div></div>
+<div class="ttc" id="aclass_servo2_d_html_a9a68f7880a0be11aa0713affdb6c519d"><div class="ttname"><a href="../../d6/da5/class_servo2_d.html#a9a68f7880a0be11aa0713affdb6c519d">Servo2D::dtRatio</a></div><div class="ttdeci">double dtRatio</div><div class="ttdoc">time step ratio to critical time step</div><div class="ttdef"><b>Definition:</b> Servo2D.h:42</div></div>
+<div class="ttc" id="aclass_servo2_d_html_aa94c09fe47a5a208bb2974eb922cdc2e"><div class="ttname"><a href="../../d6/da5/class_servo2_d.html#aa94c09fe47a5a208bb2974eb922cdc2e">Servo2D::wallStiffness</a></div><div class="ttdeci">double wallStiffness</div><div class="ttdoc">stiffness of the wall</div><div class="ttdef"><b>Definition:</b> Servo2D.h:34</div></div>
+<div class="ttc" id="aclass_servo2_d_html_aafc912ad18227f6329717de66eb93075"><div class="ttname"><a href="../../d6/da5/class_servo2_d.html#aafc912ad18227f6329717de66eb93075">Servo2D::xRight</a></div><div class="ttdeci">double xRight</div><div class="ttdoc">intial x range, initial position of left &amp; right walls</div><div class="ttdef"><b>Definition:</b> Servo2D.h:44</div></div>
+<div class="ttc" id="aclass_servo2_d_html_ab0c2f53308c85ddcdc6a99ee3d076248"><div class="ttname"><a href="../../d6/da5/class_servo2_d.html#ab0c2f53308c85ddcdc6a99ee3d076248">Servo2D::friction</a></div><div class="ttdeci">double friction</div><div class="ttdoc">friction coeff of the circle</div><div class="ttdef"><b>Definition:</b> Servo2D.h:32</div></div>
+<div class="ttc" id="aclass_servo2_d_html_ac5b33e4ae471c9adece9ade91a8727ca"><div class="ttname"><a href="../../d6/da5/class_servo2_d.html#ac5b33e4ae471c9adece9ade91a8727ca">Servo2D::localDamping</a></div><div class="ttdeci">double localDamping</div><div class="ttdoc">local damping coeff</div><div class="ttdef"><b>Definition:</b> Servo2D.h:40</div></div>
+<div class="ttc" id="aclass_servo2_d_html_ae6d4bd7d55d1bc050fd13e75dd41517b"><div class="ttname"><a href="../../d6/da5/class_servo2_d.html#ae6d4bd7d55d1bc050fd13e75dd41517b">Servo2D::density</a></div><div class="ttdeci">double density</div><div class="ttdoc">density of the circle</div><div class="ttdef"><b>Definition:</b> Servo2D.h:29</div></div>
+<div class="ttc" id="aclass_servo2_d_html_ae8a47380bac43eb52e51ddd351bea038"><div class="ttname"><a href="../../d6/da5/class_servo2_d.html#ae8a47380bac43eb52e51ddd351bea038">Servo2D::radius</a></div><div class="ttdeci">double radius</div><div class="ttdoc">radius of the circle</div><div class="ttdef"><b>Definition:</b> Servo2D.h:26</div></div>
+<div class="ttc" id="aclass_servo2_d_html_ae8f7415cca4c4e0563e2fc2d003fada1"><div class="ttname"><a href="../../d6/da5/class_servo2_d.html#ae8f7415cca4c4e0563e2fc2d003fada1">Servo2D::wallFriction</a></div><div class="ttdeci">double wallFriction</div><div class="ttdoc">friction coeff of the wall</div><div class="ttdef"><b>Definition:</b> Servo2D.h:36</div></div>
+<div class="ttc" id="aclass_servo_engine_html"><div class="ttname"><a href="../../d3/d74/class_servo_engine.html">ServoEngine</a></div><div class="ttdef"><b>Definition:</b> ServoEngine.h:6</div></div>
+<div class="ttc" id="aclassbi2___aabb___aabb_html"><div class="ttname"><a href="../../d5/d99/classbi2___aabb___aabb.html">bi2_Aabb_Aabb</a></div><div class="ttdef"><b>Definition:</b> b2_Aabb_Aabb.h:5</div></div>
+<div class="ttc" id="aclassig2___circle___circle___gc_geom_html"><div class="ttname"><a href="../../d3/ded/classig2___circle___circle___gc_geom.html">ig2_Circle_Circle_GcGeom</a></div><div class="ttdoc">Interaction geometry class for circle-circle contact</div><div class="ttdef"><b>Definition:</b> ig2_Circle_Circle_GcGeom.h:8</div></div>
+<div class="ttc" id="aclassig2___circle___line___gc_geom_html"><div class="ttname"><a href="../../d9/dde/classig2___circle___line___gc_geom.html">ig2_Circle_Line_GcGeom</a></div><div class="ttdoc">Interaction geometry class for circle-line contact</div><div class="ttdef"><b>Definition:</b> ig2_Circle_Line_GcGeom.h:9</div></div>
+<div class="ttc" id="aclassip2___frict___frict___frict_i_phys_html"><div class="ttname"><a href="../../dc/d78/classip2___frict___frict___frict_i_phys.html">ip2_Frict_Frict_FrictIPhys</a></div><div class="ttdef"><b>Definition:</b> ip2_Frict_Frict_FrictIPhys.h:7</div></div>
+<div class="ttc" id="aclasslaw2___frict_frict___gc_geom___std_html"><div class="ttname"><a href="../../d6/d98/classlaw2___frict_frict___gc_geom___std.html">law2_FrictFrict_GcGeom_Std</a></div><div class="ttdoc">Standard contact law</div><div class="ttdef"><b>Definition:</b> law2_FrictFrict_GcGeom_Std.h:8</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_d2bdd8205b81aa505d96e4fc22c7ef04.html">SimpleDEM</a></li><li class="navelem"><a class="el" href="../../dir_0a0c75e27d72a3a6558198456060c458.html">include</a></li><li class="navelem"><a class="el" href="../../dir_a03799d2b3cfcbc04a115e190847317d.html">experiments</a></li><li class="navelem"><b>Servo2D.h</b></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

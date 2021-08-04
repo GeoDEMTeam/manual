@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SimpleDEM: GeneralCircleGeom类 参考</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../temp_logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SimpleDEM
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Discrete Element Methods Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d5/dab/class_general_circle_geom.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="../../d2/d26/class_general_circle_geom-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">GeneralCircleGeom类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>A general interaction geometry class for circle-circle type of interactions  
+ <a href="../../d5/dab/class_general_circle_geom.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../de/d71/_general_circle_geom_8h_source.html">GeneralCircleGeom.h</a>&gt;</code></p>
+<div class="dynheader">
+类 GeneralCircleGeom 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d5/dab/class_general_circle_geom.png" usemap="#GeneralCircleGeom_map" alt=""/>
+  <map id="GeneralCircleGeom_map" name="GeneralCircleGeom_map">
+<area href="../../d0/dd1/class_i_geom.html" title="Base class for interaction geometry (contact geometric data)" alt="IGeom" shape="rect" coords="0,0,123,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a3588bfc3fcd8d213604e6c78bbe492d5"><td class="memItemLeft" align="right" valign="top"><a id="a3588bfc3fcd8d213604e6c78bbe492d5"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>GeneralCircleGeom</b> (const vec3 &amp;normal, const vec3 &amp;tangent, const vec3 &amp;point, const double &amp;deltaN, const double &amp;<a class="el" href="../../d5/dab/class_general_circle_geom.html#a4fcde7e44086240a1b4d952f552a4cea">deltaN_velocity</a>, const vec3 &amp;deltaT, const double &amp;<a class="el" href="../../d5/dab/class_general_circle_geom.html#adaf2f73067fe3130ff9ee6b8bee6f384">deltaT_velocity</a>)</td></tr>
+<tr class="separator:a3588bfc3fcd8d213604e6c78bbe492d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6f0fc9da866e783522fa08b0865832b"><td class="memItemLeft" align="right" valign="top"><a id="af6f0fc9da866e783522fa08b0865832b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>update_delta_tangential</b> (const vec3 &amp;deltaT)</td></tr>
+<tr class="separator:af6f0fc9da866e783522fa08b0865832b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d5922aa2c1d687f9caad7f29d283168"><td class="memItemLeft" align="right" valign="top"><a id="a0d5922aa2c1d687f9caad7f29d283168"></a>
+const double &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>deltaN</b> () const</td></tr>
+<tr class="separator:a0d5922aa2c1d687f9caad7f29d283168"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae219a073704c59939e3dff38cd6a8aa2"><td class="memItemLeft" align="right" valign="top"><a id="ae219a073704c59939e3dff38cd6a8aa2"></a>
+const vec3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>deltaT</b> () const</td></tr>
+<tr class="separator:ae219a073704c59939e3dff38cd6a8aa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17614afc2145f5a35759f526fe02f997"><td class="memItemLeft" align="right" valign="top"><a id="a17614afc2145f5a35759f526fe02f997"></a>
+const vec3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>normal</b> () const</td></tr>
+<tr class="separator:a17614afc2145f5a35759f526fe02f997"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaccfbc68872b36e2c4afda6e4c8188e"><td class="memItemLeft" align="right" valign="top"><a id="abaccfbc68872b36e2c4afda6e4c8188e"></a>
+const vec3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>tangent</b> () const</td></tr>
+<tr class="separator:abaccfbc68872b36e2c4afda6e4c8188e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab981df4978d76cf0dec7cc41db229979"><td class="memItemLeft" align="right" valign="top"><a id="ab981df4978d76cf0dec7cc41db229979"></a>
+const vec3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>contact_point</b> () const</td></tr>
+<tr class="separator:ab981df4978d76cf0dec7cc41db229979"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fcde7e44086240a1b4d952f552a4cea"><td class="memItemLeft" align="right" valign="top">const vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dab/class_general_circle_geom.html#a4fcde7e44086240a1b4d952f552a4cea">deltaN_velocity</a> () const</td></tr>
+<tr class="memdesc:a4fcde7e44086240a1b4d952f552a4cea"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the normal interpenetration as vectors  <a href="../../d5/dab/class_general_circle_geom.html#a4fcde7e44086240a1b4d952f552a4cea">更多...</a><br /></td></tr>
+<tr class="separator:a4fcde7e44086240a1b4d952f552a4cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaf2f73067fe3130ff9ee6b8bee6f384"><td class="memItemLeft" align="right" valign="top">const vec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dab/class_general_circle_geom.html#adaf2f73067fe3130ff9ee6b8bee6f384">deltaT_velocity</a> () const</td></tr>
+<tr class="memdesc:adaf2f73067fe3130ff9ee6b8bee6f384"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the tangential interpenetration as vectors  <a href="../../d5/dab/class_general_circle_geom.html#adaf2f73067fe3130ff9ee6b8bee6f384">更多...</a><br /></td></tr>
+<tr class="separator:adaf2f73067fe3130ff9ee6b8bee6f384"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>A general interaction geometry class for circle-circle type of interactions </p>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000014">待办事项:</a></b></dt><dd>scaler &amp; vector data refactoring </dd></dl>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a4fcde7e44086240a1b4d952f552a4cea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fcde7e44086240a1b4d952f552a4cea">&#9670;&nbsp;</a></span>deltaN_velocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const vec3 GeneralCircleGeom::deltaN_velocity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return the normal interpenetration as vectors </p>
+<dl class="section note"><dt>注解</dt><dd>Don't return a reference to a temporally computed variable </dd></dl>
+
+</div>
+</div>
+<a id="adaf2f73067fe3130ff9ee6b8bee6f384"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaf2f73067fe3130ff9ee6b8bee6f384">&#9670;&nbsp;</a></span>deltaT_velocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const vec3 GeneralCircleGeom::deltaT_velocity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return the tangential interpenetration as vectors </p>
+<dl class="section note"><dt>注解</dt><dd>Don't return a reference to a temporally computed variable </dd></dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="../../de/d71/_general_circle_geom_8h_source.html">GeneralCircleGeom.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d5/dab/class_general_circle_geom.html">GeneralCircleGeom</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

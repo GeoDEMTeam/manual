@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SimpleDEM: LineShp.h 源文件</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../temp_logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SimpleDEM
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">Discrete Element Methods Library</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d8/dd9/_line_shp_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">LineShp.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;GL/freeglut.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;core/Datas/Shape.h&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;core/Math.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../da/d48/class_line_shp.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../da/d48/class_line_shp.html">LineShp</a> : <span class="keyword">public</span> <a class="code" href="../../d7/da7/class_shape.html">Shape</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    vec3 _direction; <span class="comment">// 墙的方向</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">double</span> _length;  <span class="comment">// 墙的长度</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../da/d48/class_line_shp.html#a8d05149cffe290b0b9f027578b57ce3e">   14</a></span>&#160;    <a class="code" href="../../da/d48/class_line_shp.html#a8d05149cffe290b0b9f027578b57ce3e">LineShp</a>(<span class="keyword">const</span> vec3&amp; direction, <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; length) : _direction(direction), _length(length) {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        _direction.normalize(); <span class="comment">// 方向变为单位向量</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="comment">// 计算该形状的Bound点</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        vec3 e = 0.5 * _direction * _length;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        vec3 s = -e;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        _minVert = s.cwiseMin(e);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        _maxVert = s.cwiseMax(e);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="../../d7/da7/class_shape.html#a7c43c526d0a9e8a424cac3898bc1e0bb">_volume</a> = _length * _length * _length;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        _inertia = pow(_length, 2) / 12.0;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="comment">// 质心</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        _cog = vec3(0, 0, 0);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">/* Getter */</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">const</span> vec3&amp; direction()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _direction; }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../da/d48/class_line_shp.html#aa6d1df2695e6acc109439c8534eb3fd4">   37</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../da/d48/class_line_shp.html#aa6d1df2695e6acc109439c8534eb3fd4">draw</a>()<span class="keyword"> const override </span>{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        glLineWidth(5.0);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        glBegin(GL_LINES);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        glVertex3dv(_minVert.data());</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        glVertex3dv(_maxVert.data());</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        glEnd();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    IMPLEMENT_INDEXABLE_CLASS(<a class="code" href="../../da/d48/class_line_shp.html">LineShp</a>)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
+<div class="ttc" id="aclass_line_shp_html"><div class="ttname"><a href="../../da/d48/class_line_shp.html">LineShp</a></div><div class="ttdef"><b>Definition:</b> LineShp.h:9</div></div>
+<div class="ttc" id="aclass_line_shp_html_a8d05149cffe290b0b9f027578b57ce3e"><div class="ttname"><a href="../../da/d48/class_line_shp.html#a8d05149cffe290b0b9f027578b57ce3e">LineShp::LineShp</a></div><div class="ttdeci">LineShp(const vec3 &amp;direction, const double &amp;length)</div><div class="ttdoc">LineShp类构造函数</div><div class="ttdef"><b>Definition:</b> LineShp.h:14</div></div>
+<div class="ttc" id="aclass_line_shp_html_aa6d1df2695e6acc109439c8534eb3fd4"><div class="ttname"><a href="../../da/d48/class_line_shp.html#aa6d1df2695e6acc109439c8534eb3fd4">LineShp::draw</a></div><div class="ttdeci">virtual void draw() const override</div><div class="ttdoc">绘制一个直线, 起点为原点</div><div class="ttdef"><b>Definition:</b> LineShp.h:37</div></div>
+<div class="ttc" id="aclass_shape_html"><div class="ttname"><a href="../../d7/da7/class_shape.html">Shape</a></div><div class="ttdoc">Shape(形状)类, 是所有形状的子类</div><div class="ttdef"><b>Definition:</b> Shape.h:6</div></div>
+<div class="ttc" id="aclass_shape_html_a7c43c526d0a9e8a424cac3898bc1e0bb"><div class="ttname"><a href="../../d7/da7/class_shape.html#a7c43c526d0a9e8a424cac3898bc1e0bb">Shape::_volume</a></div><div class="ttdeci">double _volume</div><div class="ttdoc">Bound该Body的范围</div><div class="ttdef"><b>Definition:</b> Shape.h:9</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_d2bdd8205b81aa505d96e4fc22c7ef04.html">SimpleDEM</a></li><li class="navelem"><a class="el" href="../../dir_0a0c75e27d72a3a6558198456060c458.html">include</a></li><li class="navelem"><a class="el" href="../../dir_2966195331fac0456cc193b1d1d3ee57.html">pkg</a></li><li class="navelem"><a class="el" href="../../dir_67218e3dcb416011c74212704fe1b607.html">Datas</a></li><li class="navelem"><b>LineShp.h</b></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

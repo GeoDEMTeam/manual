@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['localdamping_317',['localDamping',['../dd/dc6/class_angle_of_repose2_d.html#ac2a6f72c60f2d922bfb4c5e7d6ec4a42',1,'AngleOfRepose2D::localDamping()'],['../dd/d02/class_angle_of_repose3_d.html#a6c8a5456fee91a35ccac163658f8a378',1,'AngleOfRepose3D::localDamping()'],['../d6/da5/class_servo2_d.html#ac5b33e4ae471c9adece9ade91a8727ca',1,'Servo2D::localDamping()'],['../d8/de5/class_servo3_d.html#a0cfa74f241fcd9894396a71c8e175e41',1,'Servo3D::localDamping()'],['../d7/dd5/class_single_ball_fall.html#a97f3497fccba2da891551100cdddceab',1,'SingleBallFall::localDamping()'],['../d6/d14/class_single_ball_roll.html#aebd8ac5cdb9f690fec9611a9adfc5da1',1,'SingleBallRoll::localDamping()'],['../d7/d0f/class_single_circle_fall.html#a2a0640a6041d3a443ce5fe75d9123cbe',1,'SingleCircleFall::localDamping()'],['../d9/d55/class_single_circle_roll.html#a8bcd5d04f3468c31d14c00f352a40410',1,'SingleCircleRoll::localDamping()']]]
+];
