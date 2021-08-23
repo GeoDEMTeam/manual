@@ -1,6 +1,10 @@
 var class_single_ball_fall =
 [
-    [ "make_scene", "d7/dd5/class_single_ball_fall.html#a45d455f262a0764a253b7947a47f91a6", null ],
+    [ "get_params", "d7/dd5/class_single_ball_fall.html#a6c909bedc4c7ba55b765643c1088c381", null ],
+    [ "make_scene", "d7/dd5/class_single_ball_fall.html#a3cd7deb60f2433362f343440f12b6e33", null ],
+    [ "param_infos", "d7/dd5/class_single_ball_fall.html#a140f84a2402ef5fd9fd0c28c5728eab0", null ],
+    [ "set_params", "d7/dd5/class_single_ball_fall.html#a60b0dde91ce32096f402d67a669f4297", null ],
+    [ "title", "d7/dd5/class_single_ball_fall.html#a6f56bad57570b0fbc210d78fa4b00c87", null ],
     [ "damping", "d7/dd5/class_single_ball_fall.html#aa6799620e077d5a6ea48e6ec61b6b902", null ],
     [ "density", "d7/dd5/class_single_ball_fall.html#a3adfc15b046cb5e846d85116c7d026b0", null ],
     [ "dtRatio", "d7/dd5/class_single_ball_fall.html#a9b03e029c60f3c0f5e3d980ac1338f4c", null ],

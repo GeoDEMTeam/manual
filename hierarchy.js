@@ -1,8 +1,5 @@
 var hierarchy =
 [
-    [ "AngleOfRepose2D", "dd/dc6/class_angle_of_repose2_d.html", null ],
-    [ "AngleOfRepose3D", "dd/d02/class_angle_of_repose3_d.html", null ],
-    [ "BiaxialTest", "d6/da3/class_biaxial_test.html", null ],
     [ "BIntersectDispatcher", "d1/d7f/class_b_intersect_dispatcher.html", null ],
     [ "BIntersectFunctor", "df/d4d/class_b_intersect_functor.html", [
       [ "bi2_Aabb_Aabb", "d5/d99/classbi2___aabb___aabb.html", null ]
@@ -12,8 +9,6 @@ var hierarchy =
     [ "Bound", "dd/d1a/class_bound.html", [
       [ "AabbBnd", "d0/d6f/class_aabb_bnd.html", null ]
     ] ],
-    [ "DirectShearTest2D", "dc/dfe/class_direct_shear_test2_d.html", null ],
-    [ "DirectShearTest3D", "d6/d77/class_direct_shear_test3_d.html", null ],
     [ "Engine", "d8/d9b/class_engine.html", [
       [ "BiaxialControl", "d3/d66/class_biaxial_control.html", null ],
       [ "CriticalTimestep", "d8/d82/class_critical_timestep.html", null ],
@@ -30,6 +25,21 @@ var hierarchy =
       [ "Servo3DEngine", "dd/d04/class_servo3_d_engine.html", null ],
       [ "ServoEngine", "d3/d74/class_servo_engine.html", null ],
       [ "TriaxialControl", "de/d22/class_triaxial_control.html", null ]
+    ] ],
+    [ "ExpBase", "d8/d48/class_exp_base.html", [
+      [ "AngleOfRepose2D", "dd/dc6/class_angle_of_repose2_d.html", null ],
+      [ "AngleOfRepose3D", "dd/d02/class_angle_of_repose3_d.html", null ],
+      [ "BiaxialTest", "d6/da3/class_biaxial_test.html", null ],
+      [ "DirectShearTest2D", "dc/dfe/class_direct_shear_test2_d.html", null ],
+      [ "DirectShearTest3D", "d6/d77/class_direct_shear_test3_d.html", null ],
+      [ "OedometerTest3D", "d0/d8c/class_oedometer_test3_d.html", null ],
+      [ "Servo2D", "d6/da5/class_servo2_d.html", null ],
+      [ "Servo3D", "d8/de5/class_servo3_d.html", null ],
+      [ "SingleBallFall", "d7/dd5/class_single_ball_fall.html", null ],
+      [ "SingleBallRoll", "d6/d14/class_single_ball_roll.html", null ],
+      [ "SingleCircleFall", "d7/d0f/class_single_circle_fall.html", null ],
+      [ "SingleCircleRoll", "d9/d55/class_single_circle_roll.html", null ],
+      [ "TriaxialTest", "d2/d9d/class_triaxial_test.html", null ]
     ] ],
     [ "GLSphere", "da/db8/class_g_l_sphere.html", null ],
     [ "IForce", "de/ded/class_i_force.html", [
@@ -65,7 +75,6 @@ var hierarchy =
     [ "tf::ObserverInterface", null, [
       [ "MyObserver", "d2/d5b/struct_my_observer.html", null ]
     ] ],
-    [ "OedometerTest3D", "d0/d8c/class_oedometer_test3_d.html", null ],
     [ "Recorder", "d3/d1a/class_recorder.html", [
       [ "EnergyRecorder", "d9/da5/class_energy_recorder.html", null ]
     ] ],
@@ -74,20 +83,13 @@ var hierarchy =
     [ "Searcher", "dd/d41/class_searcher.html", [
       [ "GridSearcher", "d4/d0c/class_grid_searcher.html", null ]
     ] ],
-    [ "Servo2D", "d6/da5/class_servo2_d.html", null ],
-    [ "Servo3D", "d8/de5/class_servo3_d.html", null ],
     [ "Shape", "d7/da7/class_shape.html", [
       [ "CircleShp", "da/d7d/class_circle_shp.html", null ],
       [ "LineShp", "da/d48/class_line_shp.html", null ],
       [ "RectangleShp", "dc/d68/class_rectangle_shp.html", null ],
       [ "SphereShp", "d4/d0c/class_sphere_shp.html", null ]
     ] ],
-    [ "SingleBallFall", "d7/dd5/class_single_ball_fall.html", null ],
-    [ "SingleBallRoll", "d6/d14/class_single_ball_roll.html", null ],
-    [ "SingleCircleFall", "d7/d0f/class_single_circle_fall.html", null ],
-    [ "SingleCircleRoll", "d9/d55/class_single_circle_roll.html", null ],
     [ "State", "d0/d8b/class_state.html", [
       [ "NormalState", "d9/dad/class_normal_state.html", null ]
-    ] ],
-    [ "TriaxialTest", "d2/d9d/class_triaxial_test.html", null ]
+    ] ]
 ];

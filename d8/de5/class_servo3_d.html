@@ -92,12 +92,37 @@ $(document).ready(function(){initNavTree('d8/de5/class_servo3_d.html','../../');
 <div class="title">Servo3D类 参考</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+类 Servo3D 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d8/de5/class_servo3_d.png" usemap="#Servo3D_map" alt=""/>
+  <map id="Servo3D_map" name="Servo3D_map">
+<area href="../../d8/d48/class_exp_base.html" title="Base class of all experiment builders" alt="ExpBase" shape="rect" coords="0,0,62,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:aebdef68bdd6d67d4e53d041fb707f5d6"><td class="memItemLeft" align="right" valign="top"><a id="aebdef68bdd6d67d4e53d041fb707f5d6"></a>
-std::shared_ptr&lt; <a class="el" href="../../dd/d9d/class_scene_base.html">SceneBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>make_scene</b> ()</td></tr>
-<tr class="separator:aebdef68bdd6d67d4e53d041fb707f5d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f92c705cff06492bee682d63f81382a"><td class="memItemLeft" align="right" valign="top"><a id="a1f92c705cff06492bee682d63f81382a"></a>
+virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/de5/class_servo3_d.html#a1f92c705cff06492bee682d63f81382a">title</a> () override</td></tr>
+<tr class="memdesc:a1f92c705cff06492bee682d63f81382a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reimplemented interface <br /></td></tr>
+<tr class="separator:a1f92c705cff06492bee682d63f81382a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f63ca8816c8ad553d91d0c17bc5603a"><td class="memItemLeft" align="right" valign="top"><a id="a4f63ca8816c8ad553d91d0c17bc5603a"></a>
+virtual std::vector&lt; std::pair&lt; const char *, std::vector&lt; const char * &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/de5/class_servo3_d.html#a4f63ca8816c8ad553d91d0c17bc5603a">param_infos</a> () override</td></tr>
+<tr class="memdesc:a4f63ca8816c8ad553d91d0c17bc5603a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reimplemented interface <br /></td></tr>
+<tr class="separator:a4f63ca8816c8ad553d91d0c17bc5603a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee8d7804211a1306a7d6bbccc475a2af"><td class="memItemLeft" align="right" valign="top"><a id="aee8d7804211a1306a7d6bbccc475a2af"></a>
+virtual std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/de5/class_servo3_d.html#aee8d7804211a1306a7d6bbccc475a2af">get_params</a> ()</td></tr>
+<tr class="memdesc:aee8d7804211a1306a7d6bbccc475a2af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reimplemented interface <br /></td></tr>
+<tr class="separator:aee8d7804211a1306a7d6bbccc475a2af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b89679498ae87f753bf4ed8e0c08b49"><td class="memItemLeft" align="right" valign="top"><a id="a9b89679498ae87f753bf4ed8e0c08b49"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/de5/class_servo3_d.html#a9b89679498ae87f753bf4ed8e0c08b49">set_params</a> (std::vector&lt; double &gt; params)</td></tr>
+<tr class="memdesc:a9b89679498ae87f753bf4ed8e0c08b49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reimplemented interface <br /></td></tr>
+<tr class="separator:a9b89679498ae87f753bf4ed8e0c08b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51c0ff4d3f24a03a9c0f31d224bf924b"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../dd/d9d/class_scene_base.html">SceneBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/de5/class_servo3_d.html#a51c0ff4d3f24a03a9c0f31d224bf924b">make_scene</a> () override</td></tr>
+<tr class="memdesc:a51c0ff4d3f24a03a9c0f31d224bf924b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a simulation scene  <a href="../../d8/de5/class_servo3_d.html#a51c0ff4d3f24a03a9c0f31d224bf924b">更多...</a><br /></td></tr>
+<tr class="separator:a51c0ff4d3f24a03a9c0f31d224bf924b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 属性</h2></td></tr>
@@ -216,6 +241,37 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>et3_servo_alpha</b>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>et3_servo_vmax</b> = 0.1</td></tr>
 <tr class="separator:ada6c4bf61b5a3246363558af2ed11f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a51c0ff4d3f24a03a9c0f31d224bf924b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51c0ff4d3f24a03a9c0f31d224bf924b">&#9670;&nbsp;</a></span>make_scene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="../../dd/d9d/class_scene_base.html">SceneBase</a>&gt; Servo3D::make_scene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Build a simulation scene </p>
+<dl class="section return"><dt>返回</dt><dd>The smart pointer of the scene </dd></dl>
+
+<p>实现了 <a class="el" href="../../d8/d48/class_exp_base.html#aaed629f489d80a8a152a2018ed653da4">ExpBase</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">类成员变量说明</h2>
 <a id="aa91d2517ed37be9b14da0218408c89c4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa91d2517ed37be9b14da0218408c89c4">&#9670;&nbsp;</a></span>radiusRnd</h2>
@@ -233,7 +289,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>et3_servo_vmax</b> 
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li><a class="el" href="../../d2/dc3/_servo3_d_8h_source.html">Servo3D.h</a></li>
+<li>E:/Workspace/v20210103_DEM/repo/GeoDEM/SimpleDEM/SimpleDEM/include/experiments/<a class="el" href="../../d2/dc3/_servo3_d_8h_source.html">Servo3D.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

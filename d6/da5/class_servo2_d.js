@@ -1,6 +1,10 @@
 var class_servo2_d =
 [
-    [ "make_scene", "d6/da5/class_servo2_d.html#a339eb9814ff57efb268553f3996534b3", null ],
+    [ "get_params", "d6/da5/class_servo2_d.html#a51badea06d484859e21c4ad26fda08b6", null ],
+    [ "make_scene", "d6/da5/class_servo2_d.html#a352fa94fa98ab97f8e5d0c1f76b0dde0", null ],
+    [ "param_infos", "d6/da5/class_servo2_d.html#a8c1784121444f6f86b5d31a33542e141", null ],
+    [ "set_params", "d6/da5/class_servo2_d.html#aed4502dfd6beb1baf58ab19efeaf2607", null ],
+    [ "title", "d6/da5/class_servo2_d.html#ad3944b3763f2b4a94ac19004586fb51a", null ],
     [ "_et3_gain_cnt", "d6/da5/class_servo2_d.html#a5ddcc1028eff23a6640f378541e5a80a", null ],
     [ "damping", "d6/da5/class_servo2_d.html#a100d555c5e30202d5be498346279c5e4", null ],
     [ "density", "d6/da5/class_servo2_d.html#ae6d4bd7d55d1bc050fd13e75dd41517b", null ],

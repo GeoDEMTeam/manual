@@ -1,6 +1,10 @@
 var class_angle_of_repose2_d =
 [
-    [ "make_scene", "dd/dc6/class_angle_of_repose2_d.html#a7e18faf15abd66189a77ddbae642832a", null ],
+    [ "get_params", "dd/dc6/class_angle_of_repose2_d.html#aed133f7f32375f3646515bccac006e94", null ],
+    [ "make_scene", "dd/dc6/class_angle_of_repose2_d.html#ac46d8580525fa6b8c80ebbb2c299d831", null ],
+    [ "param_infos", "dd/dc6/class_angle_of_repose2_d.html#acdc9ceb4b857b7afef21cb9edd606892", null ],
+    [ "set_params", "dd/dc6/class_angle_of_repose2_d.html#aeca32e029a3945e53e58f849cd109188", null ],
+    [ "title", "dd/dc6/class_angle_of_repose2_d.html#a142ade1f91e1c8600e1af941c77af179", null ],
     [ "damping", "dd/dc6/class_angle_of_repose2_d.html#aec46b352f379196588a4ba1510ac8e8c", null ],
     [ "density", "dd/dc6/class_angle_of_repose2_d.html#a82081e2e1d955d0016de7db47156d43f", null ],
     [ "dtRatio", "dd/dc6/class_angle_of_repose2_d.html#a934cc96392dfc270dfabf081ca17355b", null ],

@@ -21,6 +21,7 @@ var annotated_dup =
     [ "EnergyRecorder", "d9/da5/class_energy_recorder.html", "d9/da5/class_energy_recorder" ],
     [ "EnergyTracing", "db/da3/class_energy_tracing.html", "db/da3/class_energy_tracing" ],
     [ "Engine", "d8/d9b/class_engine.html", "d8/d9b/class_engine" ],
+    [ "ExpBase", "d8/d48/class_exp_base.html", "d8/d48/class_exp_base" ],
     [ "ForceResetter", "d9/d97/class_force_resetter.html", "d9/d97/class_force_resetter" ],
     [ "FrictMat", "dc/da2/class_frict_mat.html", "dc/da2/class_frict_mat" ],
     [ "FrictPhys", "d4/dce/class_frict_phys.html", "d4/dce/class_frict_phys" ],

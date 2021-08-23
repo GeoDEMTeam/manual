@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SimpleDEM: Runner.h 源文件</title>
+<title>SimpleDEM: E:/Workspace/v20210103_DEM/repo/GeoDEM/SimpleDEM/SimpleDEM/include/core/Runner.h 源文件</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -128,14 +128,12 @@ $(document).ready(function(){initNavTree('dc/df9/_runner_8h_source.html','../../
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="comment">// initialize the simulation, prepare for the taskflow</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        scene_-&gt;preSimulation();</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        scene_-&gt;init_taskflow(taskflow_);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="comment">// create an observer</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        std::shared_ptr&lt;MyObserver&gt; observer = executor_.make_observer&lt;<a class="code" href="../../d2/d5b/struct_my_observer.html">MyObserver</a>&gt;(<span class="stringliteral">&quot;MyObserver&quot;</span>);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        executor_.run(taskflow_).wait();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        taskflow_.dump(std::cout);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">// std::shared_ptr&lt;MyObserver&gt; observer = executor_.make_observer&lt;MyObserver&gt;(&quot;MyObserver&quot;);</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="comment">// executor_.run(taskflow_).wait();</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">// taskflow_.dump(std::cout);</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        std::cout &lt;&lt; executor_.num_workers() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">// remove the observer (optional)</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        executor_.remove_observer(std::move(observer));</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="comment">// std::cout &lt;&lt; executor_.num_workers() &lt;&lt; std::endl;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment"></span>        <span class="comment">// executor_.remove_observer(std::move(observer));</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> run() {</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="comment">// execute the task flow</span></div>

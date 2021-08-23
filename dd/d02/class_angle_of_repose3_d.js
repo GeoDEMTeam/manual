@@ -1,6 +1,10 @@
 var class_angle_of_repose3_d =
 [
-    [ "make_scene", "dd/d02/class_angle_of_repose3_d.html#a2c21b4e9691a3fd03a5e90713548ec7e", null ],
+    [ "get_params", "dd/d02/class_angle_of_repose3_d.html#abeca82b975e2329ccd6cff6c73d4f329", null ],
+    [ "make_scene", "dd/d02/class_angle_of_repose3_d.html#a3f4f2f4ab1d970ea76977993cd8abc72", null ],
+    [ "param_infos", "dd/d02/class_angle_of_repose3_d.html#a386dc43602f9b0bf541b8bfde2f53792", null ],
+    [ "set_params", "dd/d02/class_angle_of_repose3_d.html#ab1fec50acfc649147d51a3ca4586da1d", null ],
+    [ "title", "dd/d02/class_angle_of_repose3_d.html#ac6be9940968ede4b88d9fc49dd9f2b47", null ],
     [ "damping", "dd/d02/class_angle_of_repose3_d.html#af8611f3d8cab8db84a6ba9f6e83152b1", null ],
     [ "density", "dd/d02/class_angle_of_repose3_d.html#ab8fb17e7dca357729f61db3386f6be5e", null ],
     [ "dtRatio", "dd/d02/class_angle_of_repose3_d.html#afa5610245bb1a0f96108976d0988b868", null ],
@@ -8,6 +12,7 @@ var class_angle_of_repose3_d =
     [ "localDamping", "dd/d02/class_angle_of_repose3_d.html#a6c8a5456fee91a35ccac163658f8a378", null ],
     [ "radius", "dd/d02/class_angle_of_repose3_d.html#ac2cb29a16a0dd2e3351a96a0601268ab", null ],
     [ "radiusRnd", "dd/d02/class_angle_of_repose3_d.html#a7455400d2c8411ac8374bfe5b4b033b3", null ],
+    [ "scale", "dd/d02/class_angle_of_repose3_d.html#aa2f05b41c857b22556571b4a6a9709de", null ],
     [ "stiffness", "dd/d02/class_angle_of_repose3_d.html#a887d1a510570920fa724f878a1cde9c5", null ],
     [ "useLocalDamping", "dd/d02/class_angle_of_repose3_d.html#a6272c34081d731da4d410b7ef8c03dea", null ],
     [ "wallDamping", "dd/d02/class_angle_of_repose3_d.html#adde4de07126b5663fc28718e5f3e8c29", null ],

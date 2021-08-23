@@ -1,6 +1,10 @@
 var class_single_circle_roll =
 [
-    [ "make_scene", "d9/d55/class_single_circle_roll.html#ac80c5eef08e553ee25b040a8af314a3d", null ],
+    [ "get_params", "d9/d55/class_single_circle_roll.html#aba0cf7beec3d297d7efb59f3e2d2bb49", null ],
+    [ "make_scene", "d9/d55/class_single_circle_roll.html#adc1533aa35cc8a570a7ac6f607e744d8", null ],
+    [ "param_infos", "d9/d55/class_single_circle_roll.html#ad01b41b1d974df94dc2a3c65888ea70a", null ],
+    [ "set_params", "d9/d55/class_single_circle_roll.html#a1a86f6dda2d6d9590d353af6ff4c9750", null ],
+    [ "title", "d9/d55/class_single_circle_roll.html#acebe087c518ca880bfac3b7252028bc8", null ],
     [ "damping", "d9/d55/class_single_circle_roll.html#a10e7578979002bd050b99a279c278cad", null ],
     [ "density", "d9/d55/class_single_circle_roll.html#a63eedf78bdb9f2810d60ff009313e25e", null ],
     [ "dtRatio", "d9/d55/class_single_circle_roll.html#ac2bbf571ccf0d7019b3933e91a7e4be6", null ],

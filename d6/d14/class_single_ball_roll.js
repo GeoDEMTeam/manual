@@ -1,6 +1,10 @@
 var class_single_ball_roll =
 [
-    [ "make_scene", "d6/d14/class_single_ball_roll.html#aed1075b0130ed67555d3ba1e55d7b6e9", null ],
+    [ "get_params", "d6/d14/class_single_ball_roll.html#a0ad37362346d4157d8f61983d50dfba6", null ],
+    [ "make_scene", "d6/d14/class_single_ball_roll.html#a87f5008615a46c5c26db3d57eccc5b2e", null ],
+    [ "param_infos", "d6/d14/class_single_ball_roll.html#aef025f3bc806f6c26b0162ca549638db", null ],
+    [ "set_params", "d6/d14/class_single_ball_roll.html#a65f0fd6c0a655600616e37fc737d8ca9", null ],
+    [ "title", "d6/d14/class_single_ball_roll.html#a7b7fdafe8dc933f84a1b12f5c70b8d55", null ],
     [ "damping", "d6/d14/class_single_ball_roll.html#a96d134b03f55aaf30d8e5d78153a58d0", null ],
     [ "density", "d6/d14/class_single_ball_roll.html#a43c8930b7c6a1e3fad16d5eddd546108", null ],
     [ "dtRatio", "d6/d14/class_single_ball_roll.html#aa966519ceebc0c97a37f2d3616a2fa2c", null ],
